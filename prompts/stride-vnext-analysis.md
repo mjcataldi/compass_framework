@@ -41,9 +41,6 @@ Include:
 10. Recommendation: pass, apply, apply cautiously, recruiter-only, or top choice
 
 If facts are missing that cannot be reasonably inferred, ask up to three clarifying questions before generating resume content.
-
-Job description / recruiter message:
-[PASTE ROLE HERE]
 ```
 
 ## Notes
