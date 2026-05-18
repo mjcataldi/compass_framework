@@ -25,9 +25,6 @@ Keep it truthful, ATS-aware, staff-level, and recruiter-readable.
 Do not include STRIDE analysis inside the resume artifact.
 Do not invent technologies, metrics, ownership, credentials, employment history, or experience.
 Create the resume as a clean artifact suitable for Word, PDF, and Markdown export.
-
-Target role:
-[ROLE TITLE / COMPANY]
 ```
 
 ## Notes
