@@ -2,6 +2,36 @@
 
 All notable framework changes should be documented here.
 
+## vNext 2026-05 — Word/DOCX Page-Limit Authority
+
+Clarified that user-specified resume page lengths and page limits refer to the rendered Word/DOCX artifact using the STRIDE ATS-safe Word formatting standard, not to canvas/textdoc previews, Markdown rendering, browser display, PDF produced from unstyled content, or pasted text without explicit styles.
+
+Behavior updates:
+
+- A stated page limit is the maximum allowed rendered Word/DOCX page count.
+- STRIDE must not exceed the stated page limit unless the user explicitly approves the overflow.
+- Page-constrained resumes should be generated or validated as DOCX artifacts before claiming the page target has been satisfied.
+- Canvas/textdoc resume artifacts are reviewable content drafts and are not authoritative for exact pagination, margins, font sizes, paragraph spacing, or Word style behavior.
+- If DOCX generation or page validation is unavailable, STRIDE must say so clearly and avoid claiming a verified page count.
+- Content should be compressed before reducing font sizes below the formatting standard.
+
+## vNext 2026-05 — Explicit Resume Formatting Enforcement
+
+Updated STRIDE resume artifact rules so DOCX resume generation must explicitly apply the ATS-safe Word formatting standard instead of relying on Markdown-to-Word defaults, Word theme mappings, browser copy/paste behavior, or canvas/textdoc rendering.
+
+Required DOCX formatting:
+
+- Name: 16 pt
+- Target title line: 14 pt
+- Section headers: 13 pt, bold or accent color
+- Company / role subheaders: 12 pt, bold
+- Body text: 11 pt
+- Skills inventory: 11 pt
+- Margins: 0.75 inches
+- Line spacing: single
+- Paragraph spacing: 3–6 pt, reducible to 0–3 pt near page target
+- Layout: single-column ATS version
+
 ## vNext 2026-05 — Exact ATS-Safe Word Formatting Defaults
 
 Updated STRIDE's ATS-safe Word resume formatting standard from loose ranges to exact default sizes:
