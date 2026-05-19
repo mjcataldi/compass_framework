@@ -2,6 +2,21 @@
 
 All notable framework changes should be documented here.
 
+## vNext 2026-05 — ATS-Safe Word Formatting Standard
+
+Added a formatting standard for clean ATS-safe Word resume outputs:
+
+- Name should generally use 16–18 pt type.
+- Target title line should generally use 12–13 pt type.
+- Section headers should generally use 12–13 pt type, bold or accent color.
+- Company / role subheaders should generally use 11–12 pt type, bold.
+- Body text and skills inventory should generally use 10.5–11 pt type.
+- Use single line spacing with compact paragraph spacing, generally 3–6 pt after paragraphs and 0–3 pt when the resume is near the page budget.
+- Use 0.5–0.7 inch margins for standard ATS-safe Word resumes.
+- Use a single-column layout for the main ATS resume version.
+- Avoid text boxes, tables for core content, icons, rating bars, critical contact information in headers/footers, and design-heavy formatting for standard ATS resumes.
+- Prefer compact combined company / role headings when they save space without reducing clarity.
+
 ## vNext 2026-05 — Sharp Apply Resume Mode
 
 Added Sharp Apply as an explicit opt-in resume density mode:
