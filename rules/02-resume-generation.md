@@ -103,6 +103,58 @@ Use when the user wants a broad recruiter-facing resume or when the role values 
 
 Target length: 4–5 pages for normal resume use. Do not treat Comprehensive mode as permission to reproduce the full master CV unless the user explicitly asks for a full CV or archive.
 
+## ATS-Safe Word Formatting Standard
+
+STRIDE-generated resume artifacts should be easy to convert into ATS-safe Word, PDF, and Markdown formats.
+
+Default formatting guidance for Word/DOCX exports:
+
+- Name: 16–18 pt
+- Target title line: 12–13 pt
+- Section headers: 12–13 pt, bold or accent color
+- Company / role subheaders: 11–12 pt, bold
+- Body text: 10.5–11 pt
+- Skills inventory: 10.5–11 pt
+- Line spacing: single
+- Paragraph spacing: 3–6 pt after paragraphs, reduced to 0–3 pt when page length exceeds the target
+- Margins: 0.5–0.7 inches
+- Layout: single-column for the main ATS version
+
+Avoid ATS-risky formatting for standard resumes:
+
+- Two-column main layouts
+- Text boxes for important content
+- Tables for core experience or skills
+- Icons, rating bars, charts, or visual skill meters
+- Headers/footers containing critical contact information
+- Excessive decorative lines, spacing, or section padding
+
+Formatting should support the resume length policy. If the content is near the page budget, reduce spacing before removing high-value evidence.
+
+## Experience Heading Compression
+
+Use compact experience headings when they improve readability and reduce vertical bloat.
+
+Preferred compact pattern for standard resume entries:
+
+```markdown
+### Company Name — Role Title
+**Dates | Location / Remote | Clearance or credential context when relevant**
+```
+
+Use this pattern when a company has one primary role or when the role can be clearly represented on one line.
+
+For consulting roles with multiple client/project subsections, prefer:
+
+```markdown
+### Company Name — Role Title
+**Dates | Location / Remote | Clearance or credential context when relevant**
+
+**Selected work:** Project A, Project B, Project C
+```
+
+Do not split company and role into separate lines by default when combining them preserves clarity. Separate company, role, and project names only when doing so materially improves comprehension, such as when there are multiple roles at the same employer, promotions, overlapping contracts, or several named client engagements that need distinction.
+
 ## Tailoring Priorities
 
 Tailor in this order:
@@ -140,6 +192,7 @@ When deriving a resume from a comprehensive master CV:
 - Prefer fewer, higher-signal bullets over exhaustive bullet coverage.
 - Remove or consolidate bullets that only restate keywords without adding new evidence.
 - Use optional appendix-style detail only when the role or user explicitly justifies it.
+- Combine company and role headings onto one line when doing so saves space without reducing clarity.
 
 ## Master CV Links
 
