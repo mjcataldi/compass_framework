@@ -24,6 +24,7 @@ The active vNext 2026-05 framework includes resume length discipline:
 - Sharp Apply is an explicit opt-in 2-page resume mode for narrow cold applications, recruiter qualification screens, tightly matched roles, or user-directed resume-length experiments.
 - Resume generation should preserve ATS alignment through targeted evidence selection and truthful role-specific keyword use, not exhaustive source reproduction.
 - Master CV links should not be included by default.
+- ATS-safe Word formatting should use single-column layout, 10.5–11 pt body text, compact paragraph spacing, 0.5–0.7 inch margins, and compact combined company / role headings when clear.
 
 ## Compatibility Rule
 
@@ -36,3 +37,4 @@ Future STRIDE changes should preserve the core operating principles unless expli
 - Separate strategic analysis from resume and cover-letter artifacts
 - Length-bounded application resumes derived from comprehensive source resumes / master CVs unless a full CV, federal-style resume, proposal, bid-support document, interview dossier, or archive is explicitly requested
 - Balanced resume mode remains the default unless the user explicitly requests Sharp Apply, Concise, Comprehensive, full CV, or another named resume mode
+- Standard ATS resume formatting remains single-column and compact unless the user explicitly requests a design-heavy or non-ATS presentation version
