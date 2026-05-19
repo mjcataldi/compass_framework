@@ -48,6 +48,7 @@ Default target length by use case:
 - Cold application resume: 3–4 pages
 - Staff / Principal / Platform / Cloud / Federal / Architect resume: 4–5 pages maximum when role scope justifies the depth
 - Recruiter broad resume: 4–5 pages maximum
+- Sharp Apply resume: 2 pages, only when explicitly requested or clearly selected by the user
 - Concise resume: 2–3 pages when the user requests brevity or the role is narrow
 - Master CV / full archive: unlimited, but only when explicitly requested
 
@@ -61,17 +62,40 @@ Only exceed 5 pages when one of the following is true:
 
 ## Density Modes
 
-### Concise
-
-Use when the user needs a shorter resume or when the role is narrower.
-
-Target length: 2–3 pages.
-
 ### Balanced
 
 Default mode. Preserve enough breadth for staff-level signal while improving role-specific alignment.
 
 Target length: 3–4 pages.
+
+Balanced remains the standard STRIDE resume mode unless the user explicitly requests another mode. Do not silently downgrade Balanced to Sharp Apply just because a role is narrow.
+
+### Sharp Apply
+
+Opt-in mode for a tight 2-page resume.
+
+Target length: 2 pages.
+
+Use Sharp Apply only when the user explicitly requests "Sharp Apply," "2-page resume," or equivalent language indicating a deliberately compressed application artifact.
+
+Sharp Apply is intended for:
+
+- Narrow cold applications with clear target requirements
+- Recruiter qualification screens where fast human review matters
+- Roles with a tight technology/domain match
+- Situations where the user wants to test a shorter resume against the Balanced Staff resume
+
+Sharp Apply must preserve staff-level signal through selected proof rather than breadth. It should prioritize the strongest role-specific evidence, compress older roles aggressively, use compact skills formatting, and avoid master-CV-style completeness.
+
+Do not use Sharp Apply automatically for broad Staff, Principal, Platform, Cloud, Federal, or Architect roles unless the user explicitly requests it.
+
+### Concise
+
+Use when the user needs a shorter resume or when the role is narrower, but has not specifically requested the 2-page Sharp Apply experiment.
+
+Target length: 2–3 pages.
+
+Concise may be slightly less rigid than Sharp Apply. If the user specifically asks for the 2-page experiment, use Sharp Apply rather than Concise.
 
 ### Comprehensive
 
@@ -89,6 +113,20 @@ Tailor in this order:
 4. Most relevant recent roles
 5. Selected project themes
 6. Older roles only when they add useful evidence
+
+## Sharp Apply Construction Rules
+
+When generating a Sharp Apply resume:
+
+- Keep the artifact to 2 pages.
+- Make page 1 carry the role fit: title, targeted summary, role-specific alignment, strongest proof, and most relevant recent experience.
+- Keep only the strongest 3–4 relevant roles or projects with meaningful detail.
+- Compress older roles into short summary lines, grouped prior experience, or omit them when they do not add target-role evidence.
+- Use compact, role-specific technical skills rather than broad master-CV inventory coverage.
+- Preserve Staff-level signal through cross-system impact, architecture judgment, delivery leadership, and operational reasoning.
+- Avoid repeated architecture-pattern blocks and repeated keyword clusters.
+- Do not include a master CV link by default.
+- If important evidence cannot fit without weakening readability, place the tradeoff note in chat outside the artifact rather than expanding past 2 pages.
 
 ## Compression Rules
 
