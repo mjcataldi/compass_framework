@@ -54,11 +54,18 @@ Default target length by use case:
 
 Do not generate a 10+ page application resume by default. A 20-page master CV is appropriate as a private source archive, but it should not be treated as the standard submitted resume.
 
+When the user states a page length or page limit, the page count refers to the rendered Word/DOCX artifact using the STRIDE ATS-safe Word formatting standard. It does not refer to a canvas/textdoc preview, Markdown view, browser render, pasted text without styles, or any unformatted representation.
+
+A stated page limit is the maximum allowed page count in the generated Word/DOCX file. The generator must compress, consolidate, or remove lower-priority evidence until the rendered Word/DOCX artifact fits within the stated maximum. Do not exceed the page limit unless the user explicitly approves the overflow.
+
+If content cannot fit within the page maximum without weakening readability or truthfulness, prioritize truthful role-relevant proof, remove repeated or lower-value evidence, and explain the tradeoff outside the resume artifact. Do not hide overflow inside smaller-than-standard formatting.
+
 Only exceed 5 pages when one of the following is true:
 
 - The user explicitly requests a full CV, federal-style resume, or exhaustive archive
 - The application instructions specifically request comprehensive project history
 - The target artifact is a proposal, bid-support document, interview dossier, or internal career archive rather than a standard resume
+- The user explicitly approves exceeding the normal page maximum after being told why compression would weaken the artifact
 
 ## Density Modes
 
@@ -66,15 +73,17 @@ Only exceed 5 pages when one of the following is true:
 
 Default mode. Preserve enough breadth for staff-level signal while improving role-specific alignment.
 
-Target length: 3–4 pages.
+Target length: 3–4 rendered Word/DOCX pages under the STRIDE ATS-safe Word formatting standard.
 
 Balanced remains the standard STRIDE resume mode unless the user explicitly requests another mode. Do not silently downgrade Balanced to Sharp Apply just because a role is narrow.
+
+Balanced page targets are maximums unless the user explicitly says the page count is approximate or minimum. A Balanced resume should not exceed 4 rendered Word/DOCX pages by default.
 
 ### Sharp Apply
 
 Opt-in mode for a tight 2-page resume.
 
-Target length: 2 pages.
+Target length: 2 rendered Word/DOCX pages under the STRIDE ATS-safe Word formatting standard.
 
 Use Sharp Apply only when the user explicitly requests "Sharp Apply," "2-page resume," or equivalent language indicating a deliberately compressed application artifact.
 
@@ -93,7 +102,7 @@ Do not use Sharp Apply automatically for broad Staff, Principal, Platform, Cloud
 
 Use when the user needs a shorter resume or when the role is narrower, but has not specifically requested the 2-page Sharp Apply experiment.
 
-Target length: 2–3 pages.
+Target length: 2–3 rendered Word/DOCX pages under the STRIDE ATS-safe Word formatting standard.
 
 Concise may be slightly less rigid than Sharp Apply. If the user specifically asks for the 2-page experiment, use Sharp Apply rather than Concise.
 
@@ -101,13 +110,15 @@ Concise may be slightly less rigid than Sharp Apply. If the user specifically as
 
 Use when the user wants a broad recruiter-facing resume or when the role values wide architecture and platform scope.
 
-Target length: 4–5 pages for normal resume use. Do not treat Comprehensive mode as permission to reproduce the full master CV unless the user explicitly asks for a full CV or archive.
+Target length: 4–5 rendered Word/DOCX pages under the STRIDE ATS-safe Word formatting standard for normal resume use. Do not treat Comprehensive mode as permission to reproduce the full master CV unless the user explicitly asks for a full CV or archive.
 
 ## ATS-Safe Word Formatting Standard
 
 STRIDE-generated resume artifacts should be easy to convert into ATS-safe Word, PDF, and Markdown formats.
 
-Default formatting guidance for Word/DOCX exports:
+For DOCX resume artifacts, the formatting below must be explicitly applied during generation. Do not rely on Markdown-to-Word defaults, Word theme mappings, browser copy/paste behavior, or canvas/textdoc rendering to apply these styles.
+
+Required formatting for Word/DOCX exports:
 
 - Name: 16 pt
 - Target title line: 14 pt
@@ -115,12 +126,14 @@ Default formatting guidance for Word/DOCX exports:
 - Company / role subheaders: 12 pt, bold
 - Body text: 11 pt
 - Skills inventory: 11 pt
-- Line spacing: single
-- Paragraph spacing: 3–6 pt after paragraphs, reduced to 0–3 pt when page length exceeds the target
 - Margins: 0.75 inches
-- Layout: single-column for the main ATS version
+- Line spacing: single
+- Paragraph spacing: 3–6 pt, reducible to 0–3 pt near page target
+- Layout: single-column ATS version
 
 These font sizes are the default STRIDE resume formatting standard, not loose ranges. Only deviate when the user explicitly requests a different format or when a specific destination system requires it.
+
+Paragraph spacing may be reduced to fit the page target, but font sizes must not be reduced below the stated standard simply to satisfy page length unless the user explicitly approves smaller text.
 
 Avoid ATS-risky formatting for standard resumes:
 
@@ -131,7 +144,15 @@ Avoid ATS-risky formatting for standard resumes:
 - Headers/footers containing critical contact information
 - Excessive decorative lines, spacing, or section padding
 
-Formatting should support the resume length policy. If the content is near the page budget, reduce spacing before removing high-value evidence.
+Formatting should support the resume length policy. If the content is near the page budget, first reduce paragraph spacing within the allowed range, then consolidate repeated content, then remove lower-priority evidence. Do not claim a page target has been met until the rendered Word/DOCX artifact has been checked or generated with these settings.
+
+## Artifact Type and Page Validation
+
+Canvas/textdoc resume artifacts are reviewable content drafts. They are useful for inspecting and editing resume content, but they cannot guarantee exact Word pagination, font sizes, margins, paragraph spacing, or style behavior.
+
+When the user requests or implies a page-count-constrained resume, STRIDE should treat the DOCX artifact as the authoritative artifact for page length and formatting.
+
+If tool support is available, generate or validate the DOCX file with explicit formatting before saying the page limit has been satisfied. If DOCX generation or page validation is not available, state that clearly and describe the content-level compression performed without claiming verified page count.
 
 ## Experience Heading Compression
 
@@ -172,7 +193,7 @@ Tailor in this order:
 
 When generating a Sharp Apply resume:
 
-- Keep the artifact to 2 pages.
+- Keep the artifact to 2 rendered Word/DOCX pages.
 - Make page 1 carry the role fit: title, targeted summary, role-specific alignment, strongest proof, and most relevant recent experience.
 - Keep only the strongest 3–4 relevant roles or projects with meaningful detail.
 - Compress older roles into short summary lines, grouped prior experience, or omit them when they do not add target-role evidence.
@@ -195,6 +216,7 @@ When deriving a resume from a comprehensive master CV:
 - Remove or consolidate bullets that only restate keywords without adding new evidence.
 - Use optional appendix-style detail only when the role or user explicitly justifies it.
 - Combine company and role headings onto one line when doing so saves space without reducing clarity.
+- Treat page targets as layout constraints, not merely content-density labels.
 
 ## Master CV Links
 
@@ -322,3 +344,5 @@ The final resume should be:
 - Length-bounded for the target use case
 - Free of internal STRIDE analysis
 - Consistent with the source resume timeline
+- Formatted according to the STRIDE ATS-safe Word formatting standard when generated as DOCX
+- Within the stated rendered Word/DOCX maximum page limit when the user provides one
