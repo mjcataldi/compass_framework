@@ -79,7 +79,9 @@ STRIDE resumes should balance ATS parseability with human readability. Use simpl
 
 ### Core Strength Areas and Strategic Positioning
 
-Use concise bullets for meaning-rich staff-level strengths, strategic capabilities, architectural themes, and product/platform positioning.
+Core Strength Areas should communicate strategic capability and staff-level seniority. They should not become exhaustive one-keyword-per-line inventories.
+
+Use concise, synthesized bullets for meaning-rich staff-level strengths, strategic capabilities, architectural themes, and product/platform positioning.
 
 Preferred use cases:
 
@@ -88,7 +90,25 @@ Preferred use cases:
 - Selected Architecture Patterns when short and curated
 - Role-specific product, platform, leadership, reliability, or architecture themes
 
-Bullets in these sections should communicate capability and seniority, not behave like exhaustive keyword dumps.
+Preferred pattern:
+
+```markdown
+### Software, Platform, and Product Engineering
+
+- Staff-level architecture across scalable software, SaaS platforms, cloud-native applications, and distributed systems.
+- Backend API development, API-first platform design, data modeling, and database migration planning.
+- Full-stack product engineering across user-facing workflows, platform services, and integration boundaries.
+- Multi-tenant SaaS systems, data ingestion, normalization, analytics, and reporting platforms.
+- Maintainable code, refactoring, clean-code practices, and engineering standards.
+```
+
+Guidelines:
+
+- Prefer 3–6 synthesized bullets per Core Strength subsection.
+- Combine closely related capabilities into readable staff-level statements.
+- Use one-skill-per-bullet formatting only for short, high-signal lists.
+- If a subsection grows beyond 5–7 bullets, consolidate related items into broader bullets or convert the subsection to a comma-separated category line.
+- Keep dense tool and keyword coverage in the Technical Skills Inventory, not in Core Strength Areas.
 
 ### Technical Skills Inventory
 
@@ -132,6 +152,7 @@ Do not use long pipe-separated lists that read as keyword stuffing or become vis
 
 Avoid:
 
+- One bullet per skill in long Core Strength Area subsections
 - One bullet per skill in long technical inventory sections
 - Dense paragraph-style keyword blocks
 - Tables or multi-column skill layouts for ATS-first resumes
