@@ -2,6 +2,18 @@
 
 All notable framework changes should be documented here.
 
+## vNext 2026-05 — Resume Length Discipline
+
+Added framework-level resume length discipline to prevent application resumes from becoming reproduced master CVs:
+
+- Treat comprehensive source resumes / master CVs as private source-of-truth archives, not default submitted artifacts.
+- Default cold-application resumes should target 3–4 pages.
+- Staff, Principal, Platform, Cloud, Federal, and Architect resumes may use 4–5 pages when the role scope justifies the depth.
+- Recruiter broad resumes should generally stay within 4–5 pages.
+- Master CV / full archive / federal-style / proposal / bid-support / interview-dossier artifacts may exceed 5 pages only when explicitly requested or clearly required.
+- Preserve ATS alignment through targeted evidence selection and truthful role-specific keyword use rather than exhaustive source reproduction.
+- Do not include master CV links by default; prefer LinkedIn, portfolio/project links, or “additional detail available upon request” when supplemental detail is useful.
+
 ## vNext 2026-05 — Resume Skills Formatting Refinement
 
 Updated resume-generation behavior to improve ATS parseability and human readability:
