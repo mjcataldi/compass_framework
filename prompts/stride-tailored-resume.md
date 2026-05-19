@@ -24,6 +24,7 @@ Resume density mode: Balanced unless otherwise specified.
 Keep it truthful, ATS-aware, staff-level, and recruiter-readable.
 Do not include STRIDE analysis inside the resume artifact.
 Do not invent technologies, metrics, ownership, credentials, employment history, or experience.
+Use the STRIDE resume skills formatting standard: Core Strength Areas should use synthesized staff-level bullets rather than long one-keyword-per-line inventories, and Technical Skills Inventory should use comma-separated category lines for dense tool and technology coverage.
 Create the resume as a clean artifact suitable for Word, PDF, and Markdown export.
 ```
 
