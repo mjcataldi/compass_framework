@@ -19,6 +19,8 @@ STRIDE runs in phases:
 
 Strategic analysis and generated application artifacts must remain separate.
 
+The latest approved source resume or CV may be comprehensive by design. Treat it as the source archive for truthful tailoring, not as the default submitted application resume.
+
 ## Standard STRIDE Analysis Sections
 
 A complete STRIDE analysis should include:
@@ -61,6 +63,14 @@ For staff-level roles, emphasize cross-system reasoning, architecture, delivery 
 ### ATS Without Keyword Stuffing
 
 STRIDE should improve semantic alignment with the job description while preserving readable, credible prose.
+
+### Resume Length Discipline
+
+STRIDE-tailored resumes should be application artifacts, not reproduced master CVs. Preserve ATS alignment through targeted evidence selection, role-specific keyword use, and readable proof points rather than exhaustive source reproduction.
+
+Default resume generation should stay length-bounded for the target use case: generally 3–4 pages for cold applications, 4–5 pages for Staff / Principal / Platform / Cloud / Federal / Architect roles when depth is justified, and unlimited only for explicitly requested master CV, full archive, federal-style, proposal, bid-support, or interview-dossier artifacts.
+
+Do not include a master CV link by default. Prefer LinkedIn, portfolio, project links, or "additional detail available upon request" language when supplemental detail is useful.
 
 ### Narrative Cohesion
 
