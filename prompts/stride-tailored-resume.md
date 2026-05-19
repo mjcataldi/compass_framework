@@ -21,6 +21,11 @@ If GitHub access fails, say so clearly before proceeding. Do not reconstruct STR
 
 Use the STRIDE findings above.
 Resume density mode: Balanced unless otherwise specified.
+
+Balanced is the default resume mode and should generally target 3–4 pages.
+Use Sharp Apply only when I explicitly request "Sharp Apply," "2-page resume," or equivalent language indicating a deliberately compressed 2-page application artifact.
+Do not automatically switch from Balanced to Sharp Apply just because the role is narrow.
+
 Keep it truthful, ATS-aware, staff-level, and recruiter-readable.
 Do not include STRIDE analysis inside the resume artifact.
 Do not invent technologies, metrics, ownership, credentials, employment history, or experience.
@@ -31,3 +36,5 @@ Create the resume as a clean artifact suitable for Word, PDF, and Markdown expor
 ## Notes
 
 The generated resume should be a clean resume only. Any caveats, TruthGuard notes, or strategic warnings should be placed in chat outside the artifact.
+
+Sharp Apply is an explicit opt-in mode for a tight 2-page resume. It should be used only when the user asks for that mode or asks for a 2-page version. Balanced remains the default.
