@@ -24,7 +24,7 @@ The active vNext 2026-05 framework includes resume length discipline:
 - Sharp Apply is an explicit opt-in 2-page resume mode for narrow cold applications, recruiter qualification screens, tightly matched roles, or user-directed resume-length experiments.
 - Resume generation should preserve ATS alignment through targeted evidence selection and truthful role-specific keyword use, not exhaustive source reproduction.
 - Master CV links should not be included by default.
-- ATS-safe Word formatting should use single-column layout, 10.5–11 pt body text, compact paragraph spacing, 0.5–0.7 inch margins, and compact combined company / role headings when clear.
+- ATS-safe Word formatting should use exact default sizes: 16 pt name, 14 pt target title, 13 pt section headers, 12 pt company / role subheaders, 11 pt body text, 11 pt skills inventory, 0.75 inch margins, single-column layout, compact paragraph spacing, and compact combined company / role headings when clear.
 
 ## Compatibility Rule
 
