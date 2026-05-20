@@ -2,6 +2,17 @@
 
 All notable framework changes should be documented here.
 
+## vNext 2026-05 — DOCX-First Resume Prompt Enforcement
+
+Updated the tailored-resume and recruiter-targeted-resume prompt templates so resume generation now requires DOCX-first artifact creation when document-generation tools are available.
+
+Behavior updates:
+
+- Tailored and recruiter-targeted resume prompts now explicitly require the STRIDE ATS-safe Word formatting standard to be applied in the DOCX artifact.
+- Prompt templates now warn not to rely on Markdown, canvas/textdoc rendering, browser copy/paste, Word theme defaults, Markdown-to-DOCX defaults, or generic export behavior for resume styling.
+- STRIDE must say clearly when DOCX generation or validation is unavailable and must not claim verified Word formatting or page count in that case.
+- Markdown and PDF outputs may still be generated as secondary exports, but DOCX is authoritative when page count or styling matters.
+
 ## vNext 2026-05 — Company Environment and Candidate Sustainability
 
 Added Company Environment and Candidate Sustainability as a standard STRIDE analysis section.
