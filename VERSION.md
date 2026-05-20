@@ -16,6 +16,14 @@ When STRIDE changes materially, update this file and `STRIDE_Changelog.md` in th
 
 ## Active Behavior Notes
 
+The active vNext 2026-05 framework includes prompt authority governance:
+
+- Prompt templates are workflow launchers, not independent policy sources.
+- Active rule files are the authoritative rubric for analysis, resume generation, cover letters, TruthGuard, artifact handling, formatting, page length, and source priority.
+- Prompt templates may identify workflow phase, required inputs, target artifact type, user-selected mode, and immediate execution steps, but they must not redefine, weaken, duplicate, or override rule-file behavior.
+- If a prompt conflicts with an active rule file, the rule file wins unless the user explicitly asks to modify the STRIDE framework itself.
+- Prompt templates should stay thin and should defer to the required rule files listed for the workflow.
+
 The active vNext 2026-05 framework includes DOCX-first resume prompt enforcement:
 
 - STRIDE tailored-resume and recruiter-targeted-resume prompt templates require DOCX-first artifact generation when document-generation tools are available.
@@ -42,3 +50,4 @@ Future STRIDE changes should preserve the core operating principles unless expli
 - User-specified page lengths are interpreted as maximum rendered Word/DOCX page counts under the STRIDE ATS-safe Word formatting standard
 - Company environment and candidate sustainability analysis remains a standard STRIDE analysis section unless explicitly superseded
 - DOCX-first resume prompt enforcement remains standard for tailored and recruiter-targeted resume generation when document-generation tools are available
+- Prompt templates remain workflow launchers and must defer to active rule files for workflow behavior
