@@ -63,6 +63,44 @@ Required formatting:
 
 Do not reduce font sizes below the standard simply to hit a page limit unless the user explicitly approves smaller text. Compress content first by reducing paragraph spacing within the allowed range, consolidating repeated points, removing low-priority evidence, and tightening older roles.
 
+## DOCX Navigation and Table of Contents
+
+DOCX resume artifacts should preserve document navigation that helps reviewers scan the file.
+
+Unless the user explicitly requests otherwise, generated DOCX resumes should include a Word-compatible table of contents/navigation structure near the beginning of the document when the resume is longer than two rendered pages. The table of contents should be generated from the resume heading hierarchy rather than manually typed links whenever tool support allows it.
+
+The table of contents must remain part of the resume artifact only when it improves usability without creating ATS risk. It should be compact, plain-text, and based on standard Word heading styles. Do not use text boxes, multi-column layouts, or decorative navigation elements.
+
+If a canvas/textdoc export preserves navigation differently from the DOCX-first artifact, the DOCX-first artifact remains authoritative. The DOCX generator should explicitly create the Word navigation/TOC structure rather than relying on canvas export behavior.
+
+## Bullet and Indentation Rules
+
+Bulleted resume content must use proper hanging indentation in DOCX outputs.
+
+For standard resume bullets, the bullet marker should sit to the left while all wrapped continuation lines align with the first line of bullet text. Do not allow continuation lines to drift farther right or left than the first line of bullet text.
+
+Recommended DOCX bullet behavior:
+
+- Use Word paragraph numbering/bullet properties or an equivalent hanging-indent implementation.
+- Keep bullet text aligned consistently across wrapped lines.
+- Avoid manually typed bullet symbols when they prevent stable hanging indentation.
+- Apply the same bullet indentation rules to Core Strength Areas, Staff-level positioning bullets, experience bullets, and any other resume bullet lists.
+
+## Section and Role Spacing Rules
+
+DOCX resume artifacts should preserve enough vertical separation for human readability while staying within the page target.
+
+Apply modest top spacing before major sections, selected technical environment blocks, selected work labels, and each new role in the Professional Experience section so the reader can visually distinguish one section from the next.
+
+Recommended defaults:
+
+- Major section headings: 8–10 pt before, 3–4 pt after.
+- Company / role headings: 8–10 pt before, 2–3 pt after, with slightly more spacing before a new employer or major role group.
+- Selected work and selected technical environment lines: 4–6 pt before when following bullets or dense paragraphs.
+- Standard body paragraphs and bullets: keep compact spacing, generally 0–3 pt after, unless additional spacing is required for readability.
+
+If page length pressure exists, reduce lower-value content before eliminating all section separation. Do not create a visually cramped resume simply to preserve excess content.
+
 ## Cover Letter Artifacts
 
 Cover letters should be concise, role-specific, and source-grounded.
