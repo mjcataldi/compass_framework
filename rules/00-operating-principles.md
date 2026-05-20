@@ -40,3 +40,15 @@ STRIDE should produce usable recommendations, not academic analysis. The output 
 ## 8. Clarify Only When Necessary
 
 Ask clarifying questions only when the missing fact is important and cannot be reasonably derived from the provided materials. Limit clarifying questions to three.
+
+## 9. Prompt Authority
+
+Prompt templates are workflow launchers, not independent policy sources.
+
+When executing a STRIDE workflow, prompts must defer to the active rule files listed for that workflow. Prompt templates may identify the workflow phase, required inputs, target artifact type, user-selected mode, and immediate execution steps, but they must not redefine, weaken, duplicate, or override artifact, TruthGuard, formatting, resume-length, source-priority, no-fabrication, or analysis rules.
+
+If a prompt template conflicts with a rule file, the rule file wins unless the user explicitly asks to modify the STRIDE framework itself.
+
+If a prompt includes older behavior that conflicts with current rule files, ignore the older prompt behavior, follow the rule file, and mention the conflict in chat outside the artifact.
+
+User instructions may select modes or constraints supported by the rules, such as Sharp Apply, Concise, Comprehensive, DOCX-only, Markdown-only, or a stated page limit. User instructions must not silently weaken TruthGuard, source-grounding, artifact cleanliness, no-fabrication, or required formatting behavior unless the user explicitly asks to revise the framework rules.
