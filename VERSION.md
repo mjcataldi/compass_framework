@@ -31,6 +31,13 @@ The active vNext 2026-05 framework includes DOCX-first resume prompt enforcement
 - If a DOCX artifact cannot be generated or validated, STRIDE must say so clearly in chat and must not claim that Word formatting or page count has been verified.
 - Markdown and PDF outputs may be provided as secondary exports, but DOCX is authoritative for formatting and page count when styling or pagination matters.
 
+The active vNext 2026-05 framework includes DOCX resume readability defaults:
+
+- Generated DOCX resumes longer than two rendered pages should include a compact Word-compatible table of contents/navigation structure when tool support allows it and when doing so does not create ATS risk.
+- Bulleted resume content must use proper hanging indentation so wrapped continuation lines align with the first line of bullet text.
+- Major sections, company/role headings, selected work labels, and selected technical environment blocks should receive modest top spacing so dense resume sections remain visually scannable.
+- Page-length pressure should be handled by compressing lower-value content before eliminating all section separation or making the resume visually cramped.
+
 The active vNext 2026-05 framework includes company environment and candidate sustainability analysis.
 
 The active vNext 2026-05 framework includes resume length discipline and explicit ATS-safe Word formatting requirements for DOCX artifacts.
@@ -50,4 +57,5 @@ Future STRIDE changes should preserve the core operating principles unless expli
 - User-specified page lengths are interpreted as maximum rendered Word/DOCX page counts under the STRIDE ATS-safe Word formatting standard
 - Company environment and candidate sustainability analysis remains a standard STRIDE analysis section unless explicitly superseded
 - DOCX-first resume prompt enforcement remains standard for tailored and recruiter-targeted resume generation when document-generation tools are available
+- DOCX resume readability defaults remain standard for generated resume artifacts: compact TOC/navigation when appropriate, stable hanging bullet indentation, and readable section/role spacing
 - Prompt templates remain workflow launchers and must defer to active rule files for workflow behavior
