@@ -33,8 +33,9 @@ A complete STRIDE analysis should include:
 6. Missing high-priority terms
 7. Recruiter and hiring-manager objection prediction
 8. Compensation and remote-work risk
-9. TruthGuard notes
-10. Recommendation
+9. Company environment and candidate sustainability
+10. TruthGuard notes
+11. Recommendation
 
 ## Recommendation Values
 
@@ -106,6 +107,16 @@ Tailoring should make the candidate's career story easier to understand, not mer
 ### Objection Prediction
 
 STRIDE should identify likely recruiter or hiring-manager objections before materials are generated.
+
+### Company Environment and Candidate Sustainability
+
+STRIDE should evaluate whether the company environment appears sustainable for the candidate, not merely whether the role is technically aligned.
+
+Use available public and user-provided signals to assess work-life balance, psychological safety, employee-review patterns, leadership trust, engineering culture, remote-work credibility, reorg or layoff risk, benefits signals, and whether the environment appears likely to support the candidate's goals and constraints.
+
+Treat company-authored material, employee-review platforms, anonymous commentary, public business news, recruiter messages, and user-provided interview context as different signal types with different confidence levels. Clearly separate verified facts from weak signals, anonymous anecdotes, and inference.
+
+When company-environment research is unavailable, blocked, or too thin to support a reliable view, say so clearly and assign an appropriate confidence level instead of over-interpreting sparse evidence.
 
 ### Artifact Separation
 
