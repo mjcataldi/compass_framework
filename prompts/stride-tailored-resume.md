@@ -30,7 +30,28 @@ Keep it truthful, ATS-aware, staff-level, and recruiter-readable.
 Do not include STRIDE analysis inside the resume artifact.
 Do not invent technologies, metrics, ownership, credentials, employment history, or experience.
 Use the STRIDE resume skills formatting standard: Core Strength Areas should use synthesized staff-level bullets rather than long one-keyword-per-line inventories, and Technical Skills Inventory should use comma-separated category lines for dense tool and technology coverage.
-Create the resume as a clean artifact suitable for Word, PDF, and Markdown export.
+
+Generate the resume as a DOCX-first artifact when document-generation tools are available.
+
+For the DOCX artifact, explicitly apply the STRIDE ATS-safe Word formatting standard:
+- Name: 16 pt
+- Target title line: 14 pt
+- Section headers: 13 pt, bold or accent color
+- Company / role subheaders: 12 pt, bold
+- Body text: 11 pt
+- Skills inventory: 11 pt
+- Margins: 0.75 inches
+- Line spacing: single
+- Paragraph spacing: 3–6 pt, reducible to 0–3 pt near page target
+- Layout: single-column ATS version
+
+Do not rely on Markdown, canvas/textdoc rendering, browser copy/paste, Word theme defaults, Markdown-to-DOCX defaults, or generic export behavior to apply these styles.
+
+If a DOCX artifact cannot be generated or validated, say so clearly in chat and do not claim that Word formatting or page count has been verified.
+
+Markdown and PDF outputs may be provided as secondary exports, but the DOCX artifact is authoritative for formatting and page count.
+
+Create the resume as a clean artifact suitable for Word, PDF, and Markdown export, with DOCX treated as the source of truth when page count or styling matters.
 ```
 
 ## Notes
@@ -38,3 +59,5 @@ Create the resume as a clean artifact suitable for Word, PDF, and Markdown expor
 The generated resume should be a clean resume only. Any caveats, TruthGuard notes, or strategic warnings should be placed in chat outside the artifact.
 
 Sharp Apply is an explicit opt-in mode for a tight 2-page resume. It should be used only when the user asks for that mode or asks for a 2-page version. Balanced remains the default.
+
+When document-generation tools are available, tailored resumes should be generated DOCX-first with explicit STRIDE ATS-safe Word styles applied. Canvas/textdoc and Markdown versions are reviewable content drafts, not authoritative evidence of Word formatting or pagination.
