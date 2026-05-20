@@ -19,13 +19,17 @@ Required framework files:
 
 If GitHub access fails, say so clearly before proceeding. Do not reconstruct STRIDE behavior from memory unless explicitly authorized.
 
-Tone: professional, grounded, forward-looking, not overly enthusiastic.
-Use only truthful experience from the latest approved source resume or CV and the job description.
-Keep it concise and role-specific.
-Do not include STRIDE analysis inside the cover letter.
-Do not invent technologies, metrics, ownership, credentials, employment history, or experience.
+Treat this prompt as a workflow launcher, not as an independent source of cover-letter, tone, artifact, TruthGuard, source-priority, or no-fabrication rules.
+
+Apply the active rule files listed above as the authoritative rubric for this workflow. If this prompt appears to conflict with any required rule file, follow the rule file and mention the conflict in chat outside the artifact.
+
+Use the STRIDE findings above when available.
+Generate the cover letter artifact according to the active cover-letter, TruthGuard, and artifact rules.
+Do not include STRIDE analysis inside the cover letter artifact.
 ```
 
 ## Notes
 
-The cover letter should be clean, direct, and suitable for submission. Strategic caveats should appear outside the artifact.
+The cover letter should be a clean submission artifact. Any caveats, TruthGuard notes, rule conflicts, or strategic warnings should be placed in chat outside the artifact.
+
+Prompt templates should not duplicate detailed cover-letter tone, source-grounding, artifact-cleanliness, or TruthGuard rules. Those rules belong in the active rule files.
