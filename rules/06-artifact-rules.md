@@ -8,6 +8,14 @@ STRIDE may generate:
 
 - Tailored resumes
 - Recruiter-targeted resumes
+- Layer 0 source-of-truth files
+- Claim ledgers
+- Skill inventories
+- Role timelines
+- Do-not-claim lists
+- Source-document manifests
+- Cross-examination logs
+- Checkpoints
 - Cover letters
 - Recruiter responses
 - Application answers
@@ -17,6 +25,19 @@ STRIDE may generate:
 ## Separation Rule
 
 Generated artifacts must be clean deliverables. Do not include internal STRIDE analysis in the artifact.
+
+Layer 0 source-of-truth artifacts are internal career-source artifacts, not submitted application artifacts. They may include claim status, evidence basis, rejected claims, cross-examination notes, checkpoint metadata, and other private verification details.
+
+## Layer 0 Source-of-Truth Artifacts
+
+Layer 0 may generate and maintain source-of-truth files such as `source_document_manifest`, `role_timeline`, `claim_ledger`, `skill_inventory`, `do_not_claim`, `cross_examination_log`, `master_cv_draft`, and checkpoint files.
+
+These files are designed for accuracy, continuity, and downstream grounding. They do not need to follow resume artifact cleanliness rules because they are not application deliverables.
+
+Storage claims must be explicit:
+
+- If STRIDE can directly save/update files in the user's selected Google Drive folder or repository, it may say what was saved or updated.
+- If STRIDE cannot directly save/update files, it must provide copy-ready content and must not claim that files were saved.
 
 ## Resume Artifacts
 

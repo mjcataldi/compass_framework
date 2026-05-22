@@ -10,14 +10,19 @@ Do not generate a resume during the analysis phase unless the user explicitly re
 
 A tailored resume must be derived from:
 
-1. The latest approved source resume or CV
-2. The target job description or recruiter requirement set
-3. The current STRIDE analysis, when available
-4. Any user-provided constraints or confirmations
+1. The user-confirmed Layer 0 claim ledger and do-not-claim list, when available
+2. The latest approved source resume or CV
+3. The target job description or recruiter requirement set
+4. The current STRIDE analysis, when available
+5. Any user-provided constraints or confirmations
+
+The target job description supplies requirements, priorities, terminology, and tailoring context. It does not create candidate experience. A job-description term may be used in a resume only when the verified source material supports it or when the user confirms it.
 
 ## No-Fabrication Rule
 
 Do not add unverified technologies, ownership, metrics, credentials, team sizes, budgets, customer names, project names, responsibilities, or achievements.
+
+If a Layer 0 do-not-claim list exists, downstream resume generation must honor it. Rejected or downgraded claims must not reappear in stronger form because a job description asks for them.
 
 If a job description asks for something not present in the source resume, either omit it or mention it only as adjacent experience when that is truthful.
 

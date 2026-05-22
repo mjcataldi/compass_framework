@@ -10,8 +10,9 @@ Would the hiring manager, recruiter, and ATS understand the candidate's value qu
 
 ## Default Workflow
 
-STRIDE runs in phases:
+STRIDE runs in phases. Layer 0 is used when the user is onboarding a new career source of truth or rebuilding a master CV. Application workflows may start at analysis when a verified source resume, master CV, or claim ledger already exists.
 
+0. Source-of-truth onboarding and claim verification when needed
 1. Analysis only
 2. Tailored resume only when requested
 3. Cover letter only when requested
@@ -20,6 +21,8 @@ STRIDE runs in phases:
 Strategic analysis and generated application artifacts must remain separate.
 
 The latest approved source resume or CV may be comprehensive by design. Treat it as the source archive for truthful tailoring, not as the default submitted application resume.
+
+If a Layer 0 claim ledger or do-not-claim list exists, use it as the strongest source for claim safety. The master CV is a human-readable source archive; the claim ledger is the evidence-control layer beneath it.
 
 ## Standard STRIDE Analysis Sections
 
@@ -47,6 +50,34 @@ Use one of the following recommendation values:
 - Recruiter-only
 - Top choice
 
+## Layer 0 — Verified Career Source-of-Truth Onboarding
+
+Layer 0 is STRIDE's truth-first onboarding workflow for creating a master CV source of truth.
+
+Layer 0 should be used when:
+
+- A new person is onboarding to STRIDE.
+- A master CV is being created from prior resumes, cover letters, LinkedIn exports, brag documents, performance reviews, project notes, certifications, recruiter resumes, or other career documents.
+- An existing master CV needs to be rebuilt into a verified claim ledger.
+- The user needs a resume-generation source that prevents downstream models from inferring unsupported skills.
+
+Layer 0 must treat source documents as evidence, not automatic truth. Prior resumes, LinkedIn profiles, cover letters, recruiter resumes, and bios may be outdated, incomplete, inflated, or aspirational.
+
+Layer 0 may extract candidate claims and identify likely skills, but inferred skills must be phrased as questions until the user confirms them. Inferred skills are allowed only as questions, never as claims.
+
+Layer 0 should ask a few questions at a time, generally 3–5, and should separate:
+
+- Confirmed facts
+- Source-extracted claims
+- Candidate inferred claims
+- Contradictions or inconsistencies
+- Clarifying questions
+- Approved claims
+- Rejected or do-not-claim items
+- Claims needing evidence, metrics, or scope
+
+Layer 0 must support pause/resume checkpoints and must be honest about whether it can actually save/update Google Drive files or only produce copy-ready checkpoint content.
+
 ## Operating Principles
 
 ### Truth First
@@ -55,7 +86,9 @@ Never invent technologies, metrics, credentials, responsibilities, ownership, em
 
 ### Evidence Mapping
 
-Every strong claim in a resume, cover letter, or application answer should be traceable to the source resume, the user's direct statement, or the job description.
+Every strong candidate claim in a resume, cover letter, or application answer should be traceable to the source resume, the user's direct statement, or a user-confirmed Layer 0 claim ledger entry.
+
+Job descriptions may identify target requirements and useful terminology, but they do not create candidate experience. If the job description asks for a skill not present in the verified source material, flag the gap or use truthful adjacent phrasing instead of adding the skill.
 
 ### Staff-Level Signal
 
@@ -143,10 +176,11 @@ TruthGuard is the anti-fabrication layer. It must flag:
 When sources conflict, use this priority order:
 
 1. User's direct current instruction
-2. Current job description or recruiter message
-3. Latest approved source resume or CV
-4. STRIDE repository rules
-5. Project instructions
-6. ChatGPT memory
+2. User-confirmed Layer 0 claim ledger and do-not-claim list, when available
+3. Current job description or recruiter message for role requirements, terminology, and target context
+4. Latest approved source resume or CV
+5. STRIDE repository rules
+6. Project instructions
+7. ChatGPT memory
 
 If repository or source-resume access fails, say so clearly instead of reconstructing unavailable facts from memory.

@@ -16,6 +16,19 @@ When STRIDE changes materially, update this file and `STRIDE_Changelog.md` in th
 
 ## Active Behavior Notes
 
+The active vNext 2026-05 framework includes Layer 0 Verified Career Source-of-Truth Onboarding:
+
+- Layer 0 is the standard onboarding workflow for creating a truthful master CV source of truth for a new STRIDE user.
+- Layer 0 treats prior resumes, cover letters, LinkedIn exports, brag documents, performance reviews, project notes, certifications, recruiter resumes, and other career documents as evidence leads rather than automatic truth.
+- Layer 0 may extract candidate claims from source documents, but extracted claims remain unverified until the user confirms them.
+- Layer 0 may infer possible skills only as questions, never as resume-ready claims.
+- Layer 0 must ask clarifying and cross-examination questions in small batches, generally 3–5 questions at a time.
+- Layer 0 must classify skills, responsibilities, and ownership by depth: no claim, awareness, exposure, supported, implemented, owned, or led others.
+- Layer 0 must maintain approved claims, downgraded claims, rejected claims, unresolved claims, do-not-claim items, source-document inventory, cross-examination logs, role timeline, and checkpoints when applicable.
+- Layer 0 must support pause/resume commands such as `I need a break`, `pause`, `bookmark this`, or `let's continue later`.
+- Layer 0 must be honest about storage: if it cannot directly save or update Google Drive files, it must produce copy-ready checkpoint files and must not pretend the files were saved.
+- Layer 0 output should compile into a master CV only from approved claims.
+
 The active vNext 2026-05 framework includes prompt authority governance:
 
 - Prompt templates are workflow launchers, not independent policy sources.
@@ -59,3 +72,4 @@ Future STRIDE changes should preserve the core operating principles unless expli
 - DOCX-first resume prompt enforcement remains standard for tailored and recruiter-targeted resume generation when document-generation tools are available
 - DOCX resume readability defaults remain standard for generated resume artifacts: compact TOC/navigation when appropriate, stable hanging bullet indentation, and readable section/role spacing
 - Prompt templates remain workflow launchers and must defer to active rule files for workflow behavior
+- Layer 0 source-of-truth onboarding remains the default process for building a master CV from unverified documents or a new user's career history

@@ -48,6 +48,17 @@ The source does not support the claim.
 - Inferred but unsafe claims require confirmation.
 - Missing claims must be omitted or identified as a gap.
 
+## Layer 0 Integration
+
+When a Layer 0 claim ledger, skill inventory, cross-examination log, or do-not-claim list exists, TruthGuard must use those records before relying on older resumes or cover letters.
+
+- Approved claims may be used only within their confirmed depth level and approved phrasing boundaries.
+- Downgraded claims must use the weaker confirmed phrasing.
+- Rejected or do-not-claim items must not be reintroduced by downstream resume, cover-letter, recruiter-message, or interview-prep workflows.
+- Source-extracted claims that have not been user-confirmed remain unverified, even if they appear in multiple prior resumes or LinkedIn exports.
+- Job descriptions may indicate what the target role wants, but they do not validate that the candidate has the experience.
+- If a requested claim would require the user to defend a non-skill in an interview, omit it or flag the gap.
+
 ## Examples
 
 If the job asks for Medicaid Enterprise Systems and the source only shows public-sector modernization, do not claim Medicaid experience. Instead, state public-sector modernization and regulated delivery experience if supported.

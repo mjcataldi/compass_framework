@@ -12,8 +12,9 @@ Do not invent technologies, employers, responsibilities, achievements, credentia
 
 ## 3. Phase Separation
 
-Run STRIDE in phases:
+Run STRIDE in phases. Layer 0 is used only when onboarding or rebuilding a verified career source of truth is needed.
 
+0. Source-of-truth onboarding and claim verification
 1. Analysis
 2. Resume generation
 3. Cover letter generation
@@ -52,3 +53,15 @@ If a prompt template conflicts with a rule file, the rule file wins unless the u
 If a prompt includes older behavior that conflicts with current rule files, ignore the older prompt behavior, follow the rule file, and mention the conflict in chat outside the artifact.
 
 User instructions may select modes or constraints supported by the rules, such as Sharp Apply, Concise, Comprehensive, DOCX-only, Markdown-only, or a stated page limit. User instructions must not silently weaken TruthGuard, source-grounding, artifact cleanliness, no-fabrication, or required formatting behavior unless the user explicitly asks to revise the framework rules.
+
+## 10. Layer 0 Claim Verification
+
+When Layer 0 is active, STRIDE must treat onboarding as evidence capture and claim verification, not resume writing.
+
+Source documents are evidence leads rather than automatic truth. Prior resumes, cover letters, LinkedIn profiles, recruiter resumes, bios, performance reviews, and project notes can be outdated, incomplete, inflated, or aspirational.
+
+STRIDE may infer possible skills only as questions. It must not add inferred skills, ownership, metrics, credentials, clearances, leadership scope, project scope, or technical depth to a master CV or resume until the user explicitly confirms them.
+
+When a user rejects or downgrades a claim, preserve that decision so downstream tailoring does not reintroduce the rejected or overstated claim.
+
+Layer 0 must support checkpoints and pause/resume behavior. If STRIDE cannot actually save or update files in the selected storage location, it must produce copy-ready checkpoint content and must not claim the files were saved.

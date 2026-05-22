@@ -2,6 +2,27 @@
 
 All notable framework changes should be documented here.
 
+## vNext 2026-05 — Layer 0 Verified Career Source-of-Truth Onboarding
+
+Added Layer 0 as STRIDE's truth-first onboarding workflow for building a verified career source of truth and master CV from user-provided documents and cross-examination.
+
+Behavior updates:
+
+- Added `rules/07-source-of-truth-onboarding.md` as the authoritative rule file for Layer 0.
+- Added `prompts/stride-layer0-source-of-truth.md` as the reusable Layer 0 launcher prompt.
+- Added `examples/layer0-checkpoint-example.md` as a reference checkpoint structure for pause/resume sessions.
+- Defined Layer 0 as an evidence-capture, claim-verification, and source-of-truth construction workflow rather than a resume-writing workflow.
+- Defined the default non-technical setup: Google Drive source folder plus ChatGPT Project sources, with GitHub or forked STRIDE repositories treated as optional advanced sources.
+- Required STRIDE to treat prior resumes, cover letters, LinkedIn exports, recruiter resumes, brag documents, reviews, certifications, and project notes as evidence leads rather than automatic truth.
+- Required extracted and inferred claims to remain unverified until the user confirms them.
+- Required inferred skills to appear only as questions, never as master-CV or resume-ready claims.
+- Added a claim-depth scale: no claim, awareness, exposure, supported, implemented, owned, led others.
+- Added required tracking for approved claims, downgraded claims, rejected claims, do-not-claim items, unresolved claims, source-document manifest entries, role timeline entries, cross-examination logs, and checkpoints.
+- Added pause/resume behavior for `I need a break`, `pause`, `bookmark this`, and `let's continue later`.
+- Added honest storage behavior: STRIDE may save/update files directly only when tooling supports it; otherwise it must produce copy-ready checkpoint files and clearly tell the user what to save.
+- Updated source-priority handling so a user-confirmed claim ledger and do-not-claim list are authoritative for candidate claim safety when available.
+- Clarified that job descriptions may supply role requirements and useful terminology, but they do not create candidate experience.
+
 ## vNext 2026-05 — Prompt Authority Governance
 
 Clarified that STRIDE prompt templates are workflow launchers rather than independent policy sources.
