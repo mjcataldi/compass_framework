@@ -13,8 +13,15 @@ Before we begin, tell me clearly that this process may take multiple sessions. R
 
 Important: do not treat this as an artifact-writing exercise yet. Treat this as evidence capture, claim verification, and source-of-truth construction.
 
+Important storage transparency rule: during setup verification, inspect whether you can directly write or update files in my target datastore. If you cannot write to Google Drive, GitHub, or another requested store, say that clearly up front before asking setup questions. Do not imply anything has been saved unless you have actually written it and verified it is visible.
+
+Checkpoint artifact rule: every committed Layer 0 round should produce checkpoint artifacts, like a small git commit. At minimum, generate a checkpoint Markdown record and any changed claim-ledger or do-not-claim records. When possible, package changed files into a downloadable ZIP bundle so I can upload them to the target datastore.
+
 My source folder is:
 [PASTE GOOGLE DRIVE FOLDER LINK HERE]
+
+My target source-of-truth datastore is:
+[PASTE GOOGLE DRIVE FOLDER LINK, GITHUB REPO, OR OTHER STORAGE TARGET HERE]
 
 My COMPASS framework source is one of the following:
 [Choose one]
@@ -28,5 +35,5 @@ If more than one COMPASS framework source is available, ask me which one should 
 Core mission:
 Build a single source of truth that is as close to 100% honest as possible. Do not infer skills, ownership, tools, metrics, seniority, leadership scope, certifications, credentials, domain experience, product capabilities, research findings, or accomplishments unless I explicitly confirm them. You may propose inferred claims only as questions.
 
-Begin now with setup verification. First, explain the process in plain language, including that this may take multiple sessions and that we will checkpoint after every committed round. Then inspect the available sources and ask no more than 5 setup questions.
+Begin now with setup verification. First, explain the process in plain language, including that this may take multiple sessions and that we will checkpoint after every committed round. Then inspect the available sources, disclose whether you can write to the target datastore, and ask no more than 5 setup questions.
 ```
