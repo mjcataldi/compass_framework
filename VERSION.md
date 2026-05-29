@@ -1,16 +1,12 @@
 # COMPASS Version
 
-Current COMPASS Version: vNext 2026-05.2
-
-Former Name: STRIDE
+Current COMPASS Version: vNext 2026-05.3
 
 Canonical Branch: main
 
 Status: Active
 
-Initialized: 2026-05-18 as STRIDE
-
-Renamed: 2026-05-22 to COMPASS
+Initialized: 2026-05-18
 
 ## Version Rule
 
@@ -18,21 +14,15 @@ The version declared here governs the active framework behavior when used from t
 
 When COMPASS changes materially, update this file and `COMPASS_Changelog.md` in the same change set.
 
-## Rename Rule
+## Naming Rule
 
-COMPASS supersedes STRIDE as the canonical framework name.
-
-Legacy STRIDE references are allowed only for migration, backward compatibility, historical changelog context, or career-domain compatibility. New rules, prompts, examples, and project instructions should use COMPASS.
-
-If a prompt references STRIDE after this migration, interpret it as COMPASS unless the user explicitly asks for historical STRIDE behavior.
+COMPASS is the only canonical framework name. New rules, prompts, examples, and project instructions must use COMPASS terminology.
 
 ## Active Behavior Notes
 
-The active vNext 2026-05.2 framework includes the STRIDE-to-COMPASS rename, generalization, and Layer 0 checkpoint artifact behavior:
+The active vNext 2026-05.3 framework includes COMPASS-only terminology, generalization, and Layer 0 checkpoint artifact behavior:
 
 - COMPASS is a field-agnostic, source-grounded framework for turning messy inputs into verified, defensible outputs.
-- STRIDE is now the legacy name and may be treated as the career/job-search domain profile of COMPASS during migration.
-- COMPASS preserves the Layer 0 verified source-of-truth onboarding workflow added under STRIDE.
 - COMPASS may support multiple domain profiles, including careers, software/product planning, consulting deliverables, business strategy, research planning, grants, policy documents, and personal knowledge systems.
 - Core behavior remains truth-first, source-grounded, checkpointed, and claim-ledger-driven.
 - Layer 0 now requires checkpoint artifact generation at every committed round.

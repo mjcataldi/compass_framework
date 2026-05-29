@@ -2,6 +2,18 @@
 
 All notable framework changes should be documented here.
 
+## vNext 2026-05.3 - COMPASS-Only Repository Canonicalization
+
+Removed predecessor-name compatibility from active repository files.
+
+Behavior updates:
+
+- COMPASS is the only canonical framework name.
+- Removed legacy redirect prompt files.
+- Removed legacy compatibility cleanup helper files.
+- Updated repository guidance so future work uses COMPASS terminology only.
+- Preserved the active field-agnostic, source-grounded, TruthGuard-centered behavior.
+
 ## vNext 2026-05.2 — Layer 0 Checkpoint Artifact Generation and Storage Disclosure
 
 Updated COMPASS Layer 0 to make checkpoint artifact generation explicit at every committed round.
@@ -17,9 +29,7 @@ Behavior updates:
 - Layer 0 must not claim files were saved unless they were actually written and verified in the datastore.
 - Expanded the Layer 0 checkpoint example to include storage status, generated artifacts, direct-write availability, and next safe action.
 
-## vNext 2026-05.1 — Rename STRIDE to COMPASS and Generalize Framework
-
-Renamed the framework from STRIDE to COMPASS.
+## vNext 2026-05.1 - Generalize Framework
 
 COMPASS stands for:
 
@@ -29,18 +39,15 @@ Behavior updates:
 
 - Established COMPASS as the canonical framework name.
 - Reframed the framework as field-agnostic rather than career-only.
-- Preserved STRIDE as the legacy career-domain profile during migration.
 - Added `COMPASS_Current.md` as the canonical active framework definition.
 - Added `COMPASS_Changelog.md` as the canonical changelog.
 - Updated core documentation, rule files, prompts, and examples to use COMPASS terminology.
 - Updated Layer 0 from career-only source-of-truth onboarding to general verified source-of-truth onboarding.
 - Preserved career-specific resume, cover letter, recruiter, ATS, compensation, remote-work, and interview-prep rules as the initial careers profile.
-- Added migration guidance for legacy STRIDE file names and prompt references.
-- Added compatibility stubs for `STRIDE_Current.md` and `STRIDE_Changelog.md` so old launch prompts do not silently use stale behavior.
 
 ## vNext 2026-05 — Layer 0 Verified Career Source-of-Truth Onboarding
 
-Added Layer 0 as the original STRIDE truth-first onboarding workflow for building a verified career source of truth and master CV from user-provided documents and cross-examination.
+Added Layer 0 as the truth-first onboarding workflow for building a verified career source of truth and master CV from user-provided documents and cross-examination.
 
 This behavior is now generalized under COMPASS Layer 0.
 
@@ -54,7 +61,7 @@ Updated tailored-resume and recruiter-targeted-resume prompt templates so resume
 
 ## vNext 2026-05 — Initial Repository Baseline
 
-Initialized the STRIDE framework repository.
+Initialized the COMPASS framework repository.
 
 ## Change Management Rules
 

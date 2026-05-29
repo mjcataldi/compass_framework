@@ -48,8 +48,6 @@ Prompt templates are workflow launchers, not independent policy sources.
 
 When executing a COMPASS workflow, prompts must defer to the active rule files listed for that workflow.
 
-If a prompt includes older STRIDE behavior that conflicts with current COMPASS rule files, ignore the older prompt behavior, follow the rule file, and mention the conflict in chat outside the artifact.
+## 10. COMPASS Terminology
 
-## 10. Rename Compatibility
-
-STRIDE is the former name of COMPASS. Treat STRIDE references as COMPASS references unless the user explicitly asks for historical STRIDE behavior.
+Use COMPASS terminology in rules, prompts, examples, and project instructions.

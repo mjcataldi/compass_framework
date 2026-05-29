@@ -10,7 +10,7 @@ The framework is designed to answer a reusable question across domains:
 
 > Can a reviewer quickly understand the value, evidence, risks, assumptions, and defensible next action?
 
-COMPASS began as STRIDE, a career-focused job-evaluation and application-material workflow. STRIDE is now treated as the legacy career-domain profile inside COMPASS. Existing STRIDE prompts may continue to work during migration, but new work should use COMPASS terminology and canonical files.
+COMPASS is the canonical framework. New work should use COMPASS terminology and canonical files.
 
 ## Canonical Source Files
 
@@ -25,7 +25,7 @@ Use these files as the active source of truth:
 - `prompts/compass-layer0-source-of-truth.md` — reusable Layer 0 onboarding launcher prompt
 - `examples/` — example output patterns
 
-Legacy STRIDE files may remain as compatibility shims during migration, but they should not contain independent policy.
+Compatibility shims for earlier naming have been removed. Prompt templates and rule files should use COMPASS terminology only.
 
 ## Layer 0 Source-of-Truth Onboarding
 

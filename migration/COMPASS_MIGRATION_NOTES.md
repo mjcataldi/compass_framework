@@ -1,10 +1,10 @@
-# COMPASS Migration Notes
+# COMPASS Canonicalization Notes
 
-## Migration goal
+## Goal
 
-Rename STRIDE to COMPASS and generalize the framework beyond job-search workflows.
+Keep the repository aligned around COMPASS-only terminology and source-of-truth behavior.
 
-## New canonical files
+## Canonical files
 
 - `COMPASS_Current.md`
 - `COMPASS_Changelog.md`
@@ -13,14 +13,14 @@ Rename STRIDE to COMPASS and generalize the framework beyond job-search workflow
 - `prompts/compass-tailored-resume.md`
 - `prompts/compass-cover-letter.md`
 
-## Legacy compatibility
+## Compatibility policy
 
-Old STRIDE files are overwritten as redirect stubs so old project instructions do not accidentally load stale policy.
+Do not maintain predecessor-name redirect files or independent compatibility policy. If an old external prompt points at removed files, route the user to the current COMPASS prompt or rule file instead.
 
 ## Version bump
 
-Updated to `vNext 2026-05.1`.
+Updated to `vNext 2026-05.3`.
 
 ## Recommended PR title
 
-Rename STRIDE framework to COMPASS
+Canonicalize COMPASS repository terminology
