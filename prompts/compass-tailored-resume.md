@@ -1,7 +1,7 @@
 # COMPASS Career Profile: Tailored Resume Prompt
 
 ```text
-Generate the COMPASS-tailored resume for the role most recently analyzed by COMPASS in this conversation, using the latest approved source resume, master CV, canonical career record, and Layer 0 claim ledger when available.
+Generate the COMPASS-tailored resume for the role most recently analyzed by COMPASS in this conversation, using the latest approved source resume, master CV, canonical career record, and Intake claim ledger when available.
 
 Required framework files:
 - VERSION.md

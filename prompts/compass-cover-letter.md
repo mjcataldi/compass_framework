@@ -1,7 +1,7 @@
 # COMPASS Career Profile: Cover Letter Prompt
 
 ```text
-Generate the COMPASS cover letter using the latest approved source resume, master CV, canonical career record, and Layer 0 claim ledger when available.
+Generate the COMPASS cover letter using the latest approved source resume, master CV, canonical career record, and Intake claim ledger when available.
 
 Required framework files:
 - VERSION.md

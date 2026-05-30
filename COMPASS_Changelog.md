@@ -2,6 +2,18 @@
 
 All notable framework changes should be documented here.
 
+## vNext 2026-05.5 - COMPASS Intake Terminology Migration
+
+Renamed the active source-of-truth onboarding workflow from "Layer 0" to "COMPASS Intake" while preserving the same verified source-of-truth onboarding function.
+
+Behavior updates:
+
+- COMPASS Intake is now the canonical workflow name for verified source-of-truth onboarding.
+- The formal descriptor remains "Verified Source-of-Truth Onboarding."
+- Renamed the active Intake rule and launcher prompt files to `rules/07-compass-intake.md` and `prompts/compass-intake.md`.
+- Updated active checkpoint naming from `COMPASS_Layer0` to `COMPASS_Intake`.
+- Preserved truth-first onboarding, source-evidence handling, claim verification, do-not-claim behavior, pause/resume checkpointing, and storage honesty.
+
 ## vNext 2026-05.4 - Career-Focused Scope Correction
 
 Corrected active COMPASS scope back to careers / job-search.
@@ -11,7 +23,7 @@ Behavior updates:
 - COMPASS is a career-focused framework, not a field-agnostic framework.
 - Product, strategy, research, consulting, grant, policy, and personal knowledge workflows are out of scope unless the project owner explicitly reopens scope.
 - Updated active docs and rules to describe career source records, job-search analysis, career artifacts, and recruiter / hiring-team review.
-- Preserved TruthGuard, source-grounding, phase separation, Layer 0 checkpointing, and COMPASS-only terminology.
+- Preserved TruthGuard, source-grounding, phase separation, COMPASS Intake checkpointing, and COMPASS-only terminology.
 
 ## vNext 2026-05.3 - COMPASS-Only Repository Canonicalization
 
@@ -25,20 +37,20 @@ Behavior updates:
 - Updated repository guidance so future work uses COMPASS terminology only.
 - Preserved the active source-grounded, TruthGuard-centered behavior.
 
-## vNext 2026-05.2 — Layer 0 Checkpoint Artifact Generation and Storage Disclosure
+## vNext 2026-05.2 — COMPASS Intake Checkpoint Artifact Generation and Storage Disclosure
 
-Updated COMPASS Layer 0 to make checkpoint artifact generation explicit at every committed round.
+Updated COMPASS Intake, then named "Layer 0," to make checkpoint artifact generation explicit at every committed round.
 
 Behavior updates:
 
-- Layer 0 must produce checkpoint artifacts after each committed verification round.
+- COMPASS Intake must produce checkpoint artifacts after each committed verification round.
 - Checkpoint artifacts should behave like small git commits: each one captures the verified state and creates a recoverable backup before proceeding.
 - At minimum, each committed round should produce a checkpoint Markdown file, updated claim-ledger entries, updated do-not-claim entries when applicable, and a storage-status statement.
-- When practical, Layer 0 should package changed checkpoint files into a downloadable ZIP bundle for upload to the target datastore.
-- Layer 0 setup must disclose whether direct datastore write access is available before asking setup questions.
-- If direct write access to Google Drive, GitHub, or another requested datastore is unavailable or uncertain, Layer 0 must say so up front and explain the fallback workflow.
-- Layer 0 must not claim files were saved unless they were actually written and verified in the datastore.
-- Expanded the Layer 0 checkpoint example to include storage status, generated artifacts, direct-write availability, and next safe action.
+- When practical, COMPASS Intake should package changed checkpoint files into a downloadable ZIP bundle for upload to the target datastore.
+- Intake setup must disclose whether direct datastore write access is available before asking setup questions.
+- If direct write access to Google Drive, GitHub, or another requested datastore is unavailable or uncertain, Intake must say so up front and explain the fallback workflow.
+- Intake must not claim files were saved unless they were actually written and verified in the datastore.
+- Expanded the Intake checkpoint example to include storage status, generated artifacts, direct-write availability, and next safe action.
 
 ## vNext 2026-05.1 - Generalize Framework (Superseded by vNext 2026-05.4)
 
@@ -53,14 +65,14 @@ Behavior updates:
 - Added `COMPASS_Current.md` as the canonical active framework definition.
 - Added `COMPASS_Changelog.md` as the canonical changelog.
 - Updated core documentation, rule files, prompts, and examples to use COMPASS terminology.
-- Updated Layer 0 from career-only source-of-truth onboarding to general verified source-of-truth onboarding.
+- Updated COMPASS Intake from career-only source-of-truth onboarding to general verified source-of-truth onboarding.
 - Preserved career-specific resume, cover letter, recruiter, ATS, compensation, remote-work, and interview-prep rules as the initial careers profile.
 
 Note: The field-agnostic scope from this entry was superseded by `vNext 2026-05.4`; active COMPASS scope is careers / job-search.
 
-## vNext 2026-05 — Layer 0 Verified Career Source-of-Truth Onboarding
+## vNext 2026-05 — COMPASS Intake Verified Career Source-of-Truth Onboarding
 
-Added Layer 0 as the truth-first onboarding workflow for building a verified career source of truth and master CV from user-provided documents and cross-examination.
+Added COMPASS Intake, then named "Layer 0," as the truth-first onboarding workflow for building a verified career source of truth and master CV from user-provided documents and cross-examination.
 
 This behavior was later generalized in `vNext 2026-05.1`, then superseded by the `vNext 2026-05.4` career-focused scope correction.
 

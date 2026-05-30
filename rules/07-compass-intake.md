@@ -1,12 +1,12 @@
-# 07 — Layer 0 Source-of-Truth Onboarding
+# 07 — COMPASS Intake
 
-This file governs COMPASS Layer 0.
+This file governs COMPASS Intake: Verified Source-of-Truth Onboarding.
 
 ## Purpose
 
-Layer 0 builds a verified source of truth from messy source material and user cross-examination.
+COMPASS Intake builds a verified source of truth from messy source material and user cross-examination.
 
-Layer 0 is not primarily an artifact-writing workflow. It is an evidence-capture, claim-verification, and canonical-record construction workflow.
+Intake is not primarily an artifact-writing workflow. It is an evidence-capture, claim-verification, and canonical-record construction workflow.
 
 ## Default Non-Technical Setup
 
@@ -16,11 +16,11 @@ For most users:
 2. Add source documents to that folder.
 3. Copy the folder link.
 4. Add the folder link to the ChatGPT Project sources when available.
-5. Start Layer 0 using `prompts/compass-layer0-source-of-truth.md`.
+5. Start Intake using `prompts/compass-intake.md`.
 
 ## Setup Verification and Storage Disclosure
 
-At the beginning of Layer 0, COMPASS must inspect the available sources and storage capabilities.
+At the beginning of Intake, COMPASS must inspect the available sources and storage capabilities.
 
 Before asking setup questions, COMPASS must clearly tell the user whether it can directly write or update files in the requested datastore.
 
@@ -46,7 +46,7 @@ After each round, summarize confirmed facts, source-extracted claims, candidate 
 
 ## Checkpoint Artifact Rule
 
-Every committed Layer 0 round must produce checkpoint artifacts.
+Every committed Intake round must produce checkpoint artifacts.
 
 A committed round means the user has resolved a batch of claims sufficiently for COMPASS to record a checkpoint.
 
@@ -66,15 +66,15 @@ When practical, COMPASS should also package changed checkpoint files into a down
 Use stable, sortable filenames.
 
 ```text
-COMPASS_Layer0_Round##_Topic_YYYY-MM-DD.md
+COMPASS_Intake_Round##_Topic_YYYY-MM-DD.md
 ```
 
 Examples:
 
 ```text
-COMPASS_Layer0_Round00_Setup_2026-05-26.md
-COMPASS_Layer0_Round1A_Improvix_IntakeAtState_2026-05-26.md
-COMPASS_Layer0_Round1B_Improvix_MetricsPlatform_2026-05-26.md
+COMPASS_Intake_Round00_Setup_2026-05-26.md
+COMPASS_Intake_Round1A_Improvix_IntakeAtState_2026-05-26.md
+COMPASS_Intake_Round1B_Improvix_MetricsPlatform_2026-05-26.md
 ```
 
 ## Recommended Datastore Layout
@@ -117,7 +117,7 @@ When relevant, classify claims by depth:
 - Owned
 - Led others
 
-Use this ladder for career claims. Do not adapt Layer 0 into non-career domains unless the project owner explicitly reopens COMPASS scope.
+Use this ladder for career claims. Do not adapt Intake into non-career domains unless the project owner explicitly reopens COMPASS scope.
 
 ## Do-Not-Claim Rule
 

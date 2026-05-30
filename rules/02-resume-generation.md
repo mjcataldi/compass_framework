@@ -11,7 +11,7 @@ Do not generate a resume during the analysis phase unless the user explicitly re
 A tailored resume must be derived from:
 
 1. The latest approved source resume, master CV, or canonical career record
-2. The verified Layer 0 claim ledger and do-not-claim list when available
+2. The verified Intake claim ledger and do-not-claim list when available
 3. The target job description or recruiter requirement set
 4. The current COMPASS analysis, when available
 5. Any user-provided constraints or confirmations

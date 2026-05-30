@@ -328,7 +328,7 @@ COMPASS is a career-focused, source-grounded framework for turning messy career 
 Application type and maturity:
 
 - Type: Markdown documentation, prompt, rule, and example repository.
-- Maturity: Active framework; current version is `vNext 2026-05.4`.
+- Maturity: Active framework; current version is `vNext 2026-05.5`.
 - Canonical branch: `main`.
 - Product runtime: No frontend, backend, package runtime, database, or deployment target is documented in this repository.
 
@@ -339,14 +339,14 @@ Primary users and use cases:
 
 Primary product/architecture docs:
 
-- `README.md` - repository overview, canonical source files, Layer 0 setup, branch policy, memory/context policy, and source-of-truth policy.
+- `README.md` - repository overview, canonical source files, COMPASS Intake setup, branch policy, memory/context policy, and source-of-truth policy.
 - `VERSION.md` - active version, status, canonical branch, naming rule, compatibility rule, and material behavior notes.
 - `COMPASS_Current.md` - canonical active framework definition, workflow phases, source priority, recommendation values, and TruthGuard summary.
 - `COMPASS_Changelog.md` - framework change history and change-management rules.
 - `rules/` - durable behavior rules; prompt templates defer to these files.
-- `rules/07-source-of-truth-onboarding.md` - Layer 0 source-of-truth onboarding, storage disclosure, checkpoint artifact, and pause/resume rules.
+- `rules/07-compass-intake.md` - COMPASS Intake source-of-truth onboarding, storage disclosure, checkpoint artifact, and pause/resume rules.
 - `prompts/` - reusable workflow launcher prompt templates.
-- `examples/` - example output and Layer 0 checkpoint patterns.
+- `examples/` - example output and COMPASS Intake checkpoint patterns.
 - `migration/COMPASS_MIGRATION_NOTES.md` - COMPASS-only canonicalization notes.
 
 Read the relevant docs before implementing layer, architecture, workflow, data model, or user-facing changes.
@@ -362,7 +362,7 @@ Read the relevant docs before implementing layer, architecture, workflow, data m
 - `COMPASS_Changelog.md` - material framework change history.
 - `rules/` - numbered durable COMPASS rules.
 - `prompts/` - reusable COMPASS launcher prompts.
-- `examples/` - sample analyses and Layer 0 checkpoint output patterns.
+- `examples/` - sample analyses and COMPASS Intake checkpoint output patterns.
 - `migration/` - COMPASS canonicalization notes.
 - Frontend path: none documented.
 - Backend/API path: none documented.
@@ -382,7 +382,7 @@ If the repository structure changes, update this section.
 - Frontend: none documented.
 - Backend/API: none documented.
 - Database/storage/queue/cache: none documented for the repository itself.
-- External datastore references: Layer 0 may use Google Drive, GitHub, or another user-selected datastore for source-of-truth artifacts, but only when access is available and explicitly disclosed.
+- External datastore references: COMPASS Intake may use Google Drive, GitHub, or another user-selected datastore for source-of-truth artifacts, but only when access is available and explicitly disclosed.
 - Infrastructure/deployment: none documented.
 - Package manager: none documented.
 - Test framework: none documented.
@@ -457,7 +457,7 @@ Use the most relevant validation commands for the changed area.
 Repository-specific sanity checks:
 
 ```bash
-rg -n "COMPASS|Layer 0|TruthGuard|source of truth|source-of-truth|checkpoint|do-not-claim"
+rg -n "COMPASS|COMPASS Intake|Intake|TruthGuard|source of truth|source-of-truth|checkpoint|do-not-claim"
 ```
 
 ```bash
@@ -515,7 +515,7 @@ Known source status:
 - Canonical active files: `README.md`, `VERSION.md`, `COMPASS_Current.md`, `COMPASS_Changelog.md`, `rules/`, COMPASS-named prompts, and `examples/`.
 - Deprecated compatibility shims and predecessor-name files have been removed; do not restore them without explicit approval.
 - Migration notes record the COMPASS-only canonicalization posture.
-- The active version is `vNext 2026-05.4`; older changelog entries remain historical context.
+- The active version is `vNext 2026-05.5`; older changelog entries remain historical context.
 - This repository does not vendor a separate LEAP Charter or `/prompts/leap-recon-standard.md`; use this editable repository section as the repo-local LEAP operating source.
 
 ---
@@ -536,7 +536,7 @@ Project-specific architecture constraints:
 - Keep durable behavior in `rules/` and canonical framework docs, not only in launcher prompts.
 - Keep launcher prompts concise and deferential to active rule files.
 - Keep generated artifact rules separate from analysis and career-positioning rules.
-- Preserve phase separation: Layer 0/source-of-truth onboarding, analysis, artifact generation, supporting narrative, and follow-up/revision.
+- Preserve phase separation: COMPASS Intake/source-of-truth onboarding, analysis, artifact generation, supporting narrative, and follow-up/revision.
 - Preserve TruthGuard and evidence mapping across the career profile.
 - Add career-specific behavior as targeted rules without weakening source-grounding, TruthGuard, artifact cleanliness, or claim-verification rules.
 - Use COMPASS terminology only in active rules, prompts, examples, and project guidance.
@@ -557,7 +557,7 @@ Before changing migration or canonicalization behavior:
 Project-specific data rules:
 
 - Do not claim source-of-truth files were saved to Google Drive, GitHub, or another datastore unless the write was actually performed and verified.
-- Layer 0 source documents are evidence leads, not automatic truth.
+- COMPASS Intake source documents are evidence leads, not automatic truth.
 - Treat claim ledgers and do-not-claim lists as evidence-control data. Do-not-claim entries must block downstream artifacts from reintroducing rejected claims.
 - Preserve existing migration notes unless the user explicitly asks for cleanup.
 - Removed predecessor-name files should not be restored without explicit project-owner approval.
@@ -598,7 +598,7 @@ For workflow and artifact UX:
 Project-specific UX rules:
 
 - Keep workflow instructions plain, practical, and small-batch where documented.
-- For Layer 0, ask generally 3-5 questions at a time and support pause/resume checkpoints.
+- For COMPASS Intake, ask generally 3-5 questions at a time and support pause/resume checkpoints.
 - Keep generated artifacts clean: no internal COMPASS analysis, scoring, fit commentary, compensation strategy, risk notes, or private tactical notes unless explicitly requested.
 - Make storage status explicit for checkpoint artifacts.
 - For DOCX-style artifacts, do not claim a verified page count unless a rendered Word/DOCX artifact was validated.
@@ -619,7 +619,7 @@ If the project uses AI-assisted parsing, evaluation, generation, recommendations
 Project-specific AI rules:
 
 - Never invent technologies, employers, responsibilities, achievements, credentials, clearances, certifications, metrics, team sizes, budgets, dates, ownership claims, career achievements, business outcomes, or other material claims.
-- Every strong claim in an artifact should trace to source material, a user's direct statement, or a user-confirmed Layer 0 claim ledger entry.
+- Every strong claim in an artifact should trace to source material, a user's direct statement, or a user-confirmed Intake claim ledger entry.
 - Inferred claims are allowed only as questions until confirmed.
 - Direct evidence may be used; adjacent evidence must be reframed carefully; inferred but unsafe claims require confirmation; missing claims must be omitted or identified as gaps.
 - TruthGuard must flag unsupported technologies, domain claims, credentials, security/compliance/legal claims, metrics, ownership, leadership scope, timeline inconsistencies, and target-document keyword pressure.
@@ -641,10 +641,10 @@ Never:
 Project-specific security/privacy rules:
 
 - Do not commit source documents, personal records, resumes, claim ledgers, do-not-claim lists, checkpoint artifacts, or generated user artifacts unless the user explicitly asks and the content is intended for the repository.
-- Do not expose private user facts from Layer 0 or career workflows in prompts, examples, logs, or changelog entries.
+- Do not expose private user facts from COMPASS Intake or career workflows in prompts, examples, logs, or changelog entries.
 - Do not use ChatGPT memory to override repository COMPASS behavior when repository sources are available.
 - If repository or source-record access fails, say so clearly instead of reconstructing COMPASS rules or user facts from memory.
-- Before using Google Drive, GitHub, or another datastore for Layer 0 outputs, disclose whether direct write access is available and verified.
+- Before using Google Drive, GitHub, or another datastore for COMPASS Intake outputs, disclose whether direct write access is available and verified.
 
 ---
 
@@ -665,7 +665,7 @@ Repository validation priorities:
 2. Prompt deferral to active rules.
 3. Example consistency with active behavior.
 4. Regression searches for deprecated terminology or stale compatibility guidance.
-5. Manual smoke review of critical workflows such as Layer 0, analysis, and career artifacts.
+5. Manual smoke review of critical workflows such as COMPASS Intake, analysis, and career artifacts.
 
 ---
 
@@ -714,7 +714,7 @@ Preferred LEAP commit message:
 
 Examples:
 
-`Layer 0 - Checkpoint Artifact Storage Disclosure`
+`COMPASS Intake - Checkpoint Artifact Storage Disclosure`
 
 `COMPASS Canonicalization - Prompt Cleanup`
 
@@ -790,7 +790,7 @@ Project-specific stop conditions:
 
 - Changing the canonical framework name, active version, canonical branch, source priority, or core TruthGuard/no-fabrication behavior.
 - Restoring removed predecessor-name compatibility files without explicit project-owner approval.
-- Weakening Layer 0 storage honesty, checkpointing, source verification, claim-ledger, or do-not-claim behavior.
+- Weakening COMPASS Intake storage honesty, checkpointing, source verification, claim-ledger, or do-not-claim behavior.
 - Claiming datastore writes or saved artifacts without verified access and visibility.
 - Adding an application runtime, package manager, CI, deployment target, external service, or production dependency.
 - Committing private source-of-truth records or generated user artifacts.

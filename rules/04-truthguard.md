@@ -36,8 +36,8 @@ Before producing an artifact, check for:
 - Inferred but unsafe claims require confirmation.
 - Missing claims must be omitted or identified as a gap.
 
-## Layer 0 Integration
+## COMPASS Intake Integration
 
-When a Layer 0 claim ledger exists, it is the strongest claim-safety source.
+When a COMPASS Intake claim ledger exists, it is the strongest claim-safety source.
 
 Do-not-claim entries must override target-document keyword pressure.

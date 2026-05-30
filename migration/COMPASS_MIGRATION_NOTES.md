@@ -8,7 +8,7 @@ Keep the repository aligned around COMPASS-only terminology and source-of-truth 
 
 - `COMPASS_Current.md`
 - `COMPASS_Changelog.md`
-- `prompts/compass-layer0-source-of-truth.md`
+- `prompts/compass-intake.md`
 - `prompts/compass-analysis.md`
 - `prompts/compass-tailored-resume.md`
 - `prompts/compass-cover-letter.md`
@@ -25,8 +25,20 @@ Do not add product, strategy, research, consulting, grant, policy, or personal k
 
 ## Version bump
 
-Updated to `vNext 2026-05.4`.
+Updated to `vNext 2026-05.5`.
+
+## Intake terminology migration
+
+The former "Layer 0" source-of-truth onboarding workflow was renamed to "COMPASS Intake" in `vNext 2026-05.5`.
+
+Active framework files should use "COMPASS Intake" on first mention and "Intake" after that. Historical changelog and migration notes may mention "Layer 0" only to explain the rename.
+
+Updated active file names:
+
+- `rules/07-compass-intake.md`
+- `prompts/compass-intake.md`
+- `examples/compass-intake-checkpoint-example.md`
 
 ## Recommended PR title
 
-Canonicalize COMPASS repository terminology
+Rename Layer 0 to COMPASS Intake
