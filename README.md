@@ -33,7 +33,9 @@ COMPASS Intake is the verified source-of-truth onboarding workflow for creating 
 
 Use Intake when a career record, job-search profile, resume source set, recruiter positioning file, interview-prep record, or other career source needs a durable source of truth.
 
-Intake accepts source documents such as prior resumes, cover letters, LinkedIn exports, performance reviews, certification records, portfolio notes, recruiter notes, interview notes, job descriptions, achievement lists, project summaries, or other career reference material. These sources are treated as evidence leads, not automatic truth.
+Intake accepts source documents such as prior resumes, cover letters, LinkedIn exports, performance reviews, certification records, portfolio notes, recruiter notes, interview notes, job descriptions, achievement lists, project summaries, or other career reference material. These sources are treated as evidence leads, not automatic truth. After their material claims are ingested, reconciled, and verified, the canonical source-of-truth record and approved ledgers supersede the imported artifacts for downstream use.
+
+Intake asks generally 3-5 questions per response or batch. That limit is a pacing rule, not a scope limit; Intake should continue in small batches until material imported claims are covered, intentionally paused, deferred, rejected, excluded as not material, or marked as needing evidence, metrics, or scope clarification.
 
 Default setup for non-technical users:
 
@@ -46,6 +48,8 @@ Default setup for non-technical users:
 GitHub remains optional for end users. Technical users may fork this repository or maintain their own optimized COMPASS framework source.
 
 COMPASS Intake must support pause/resume behavior. Users may say `I need a break`, `pause`, `bookmark this`, or `let's continue later`; COMPASS should stop asking new questions and emit a checkpoint that can be resumed later.
+
+A checkpoint is a progress commit, not proof of full source coverage. Intake complete means the relevant material imported claims are captured in the coverage register and resolved into approved, narrowed, rejected, evidence-needed, metric-needed, scope-needed, deferred, or excluded status.
 
 Intake storage behavior must be honest:
 
@@ -73,6 +77,6 @@ If repository access fails, the assistant should say so clearly and should not r
 
 ## Source-of-Truth Policy
 
-COMPASS outputs must use the latest approved source-of-truth record, verified Intake claim ledger when available, do-not-claim list when available, or user-provided source material for the session.
+COMPASS outputs must use the user's current direct instruction, verified Intake claim ledger, do-not-claim list, and latest approved source-of-truth record before relying on imported artifacts as evidence. Target job descriptions and recruiter requests provide terminology and context only; they do not create experience the user does not have. Generated artifacts are downstream outputs, not factual authorities, unless separately imported and verified through Intake.
 
 COMPASS must not invent technologies, ownership, certifications, credentials, metrics, employers, responsibilities, project history, career achievements, or other career claims.

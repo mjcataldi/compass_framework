@@ -26,6 +26,10 @@ The active vNext 2026-05.5 framework includes COMPASS-only terminology, career-f
 - COMPASS supports the careers / job-search profile. Product, strategy, research, consulting, grant, policy, and personal knowledge workflows are out of scope unless the project owner explicitly reopens scope.
 - Core behavior remains truth-first, source-grounded, checkpointed, and claim-ledger-driven.
 - COMPASS Intake requires checkpoint artifact generation at every committed round.
+- COMPASS Intake requires coverage tracking for material imported claims; checkpoints are progress commits, not proof of full source ingestion.
+- Imported resumes, CVs, LinkedIn profiles, cover letters, portfolio examples, recruiter resumes, and prior generated artifacts are evidence inputs until their material claims are verified into the canonical source of truth.
+- After verified ingestion, the canonical source-of-truth record, approved claim ledger, and do-not-claim register supersede imported artifacts for downstream use.
+- Generated artifacts are downstream outputs, not factual authorities, unless separately imported and verified through Intake.
 - Intake setup must disclose whether direct datastore writes are available before asking setup questions.
 - If direct writes are unavailable, Intake must generate downloadable or copy-ready files and clearly instruct the user where to upload them.
 

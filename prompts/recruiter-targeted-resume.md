@@ -1,7 +1,7 @@
 # COMPASS Career Profile: Recruiter-Targeted Resume Prompt
 
 ```text
-Generate a COMPASS recruiter-targeted resume using the latest approved source resume, master CV, canonical career record, and Intake claim ledger when available.
+Generate a COMPASS recruiter-targeted resume using the user's current instruction, verified Intake claim ledger and do-not-claim list, and latest approved canonical career record first. Use imported resumes, master CVs, LinkedIn profiles, and similar artifacts only as evidence and provenance unless their material claims have been verified through Intake.
 
 Required framework files:
 - VERSION.md

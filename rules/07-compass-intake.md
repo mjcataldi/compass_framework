@@ -38,11 +38,62 @@ Prior documents may be useful but imperfect.
 
 COMPASS may harvest from them, but must not automatically trust them.
 
+Imported resumes, CVs, LinkedIn profiles, cover letters, portfolio examples, recruiter resumes, prior generated artifacts, and similar materials are evidence inputs. They are not permanent factual authorities.
+
+Once material claims from an imported artifact are extracted, reconciled, and verified into the canonical source-of-truth record and approved ledgers, the source-of-truth supersedes the imported artifact for downstream use.
+
+Imported artifacts should remain traceable as provenance and history. Downstream artifacts must use the canonical source-of-truth record, approved claim ledger, and do-not-claim register first. Do not re-harvest old resumes, prior generated outputs, or other historical artifacts as if they are current truth after verified ingestion.
+
+Generated resumes, cover letters, recruiter messages, application answers, LinkedIn drafts, interview notes, and portfolio drafts are downstream outputs. They are not factual authorities unless they are separately imported, extracted, reconciled, and verified through Intake.
+
 ## Small-Batch Questioning
 
 Ask 3-5 questions at a time unless the user asks for more.
 
+The 3-5 question limit is a user-experience throttle per response or batch. It is not a limit of 3-5 questions per role, 3-5 questions per source artifact, or 3-5 questions total.
+
+Intake must continue in small batches until the relevant imported source coverage is complete, intentionally paused, deferred, rejected, or marked as needing evidence, metrics, or scope clarification.
+
 After each round, summarize confirmed facts, source-extracted claims, candidate inferred claims, contradictions, clarifying questions, approved claims, rejected claims, and claims needing evidence, metrics, or scope.
+
+## Coverage Gate Rule
+
+A role, project, artifact, or source file is not Intake-complete until every material imported claim has been captured in a coverage register or equivalent checkpoint metadata with one of these statuses:
+
+- Imported / unreviewed
+- Source-extracted / unconfirmed
+- User-confirmed
+- Approved
+- Approved with narrowed wording
+- Approved with claim-depth boundary
+- Rejected / do-not-claim
+- Needs evidence
+- Needs metric
+- Needs scope clarification
+- Deferred intentionally
+- Not material / excluded with reason
+
+COMPASS must not imply that a source, role, project, or artifact has been fully ingested unless coverage has been verified.
+
+## Canonical Source Priority
+
+When Intake or downstream artifact generation must resolve conflicting sources, use this order:
+
+1. User's current direct instruction
+2. User-confirmed claim ledger and do-not-claim ledger
+3. Canonical source-of-truth record
+4. Imported artifacts as evidence and provenance only
+5. Target job description, recruiter request, or opportunity record for terminology and context only
+6. Generated artifacts as historical outputs only
+7. Framework defaults and project memory only when not contradicted by stronger sources
+
+Target job descriptions, recruiter requests, and opportunity records may identify useful terminology, selection criteria, and gaps. They must not create experience, skills, ownership, metrics, credentials, or facts the user does not have.
+
+## Intake Completion Definition
+
+Intake complete means all material claims from the relevant imported source set have been captured in the coverage register and resolved into approved, narrowed, rejected, evidence-needed, metric-needed, scope-needed, deferred, or excluded status.
+
+Checkpoint created does not mean Intake complete. A checkpoint is a progress commit, not proof of full source coverage.
 
 ## Checkpoint Artifact Rule
 
@@ -57,7 +108,8 @@ At minimum, each committed round should produce:
 1. A checkpoint Markdown file for the round.
 2. Any updated claim-ledger entries.
 3. Any updated do-not-claim entries.
-4. A storage-status statement.
+4. Any updated coverage-register entries or equivalent coverage metadata.
+5. A storage-status statement.
 
 When practical, COMPASS should also package changed checkpoint files into a downloadable ZIP bundle so the user can upload them into the datastore as a batch.
 

@@ -14,5 +14,5 @@ Required framework files:
 
 Treat this prompt as a workflow launcher, not as an independent policy source.
 
-Use the latest approved source record, canonical record, claim ledger, or user-provided source documents as the source of truth. Do not invent facts, claims, metrics, ownership, credentials, or experience.
+Use the user's current instruction, verified Intake claim ledger and do-not-claim list, and latest approved canonical record before imported source documents. Treat imported resumes, CVs, LinkedIn profiles, cover letters, and generated artifacts as evidence and provenance only unless their material claims have been verified through Intake. Do not invent facts, claims, metrics, ownership, credentials, or experience.
 ```

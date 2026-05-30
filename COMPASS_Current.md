@@ -20,7 +20,7 @@ COMPASS runs in phases.
 
 Strategic analysis and generated artifacts must remain separate.
 
-If a COMPASS Intake claim ledger or do-not-claim list exists, use it as the strongest source for claim safety. The canonical record is a human-readable source archive; the claim ledger is the evidence-control layer beneath it.
+If a COMPASS Intake claim ledger or do-not-claim list exists, use it as the strongest source for claim safety. The canonical record is a human-readable source archive; the claim ledger is the evidence-control layer beneath it. Imported artifacts are evidence inputs and provenance records; after verified ingestion, the canonical source-of-truth record and approved ledgers supersede them for downstream use.
 
 ## Standard COMPASS Analysis Sections
 
@@ -54,9 +54,11 @@ COMPASS Intake is the truth-first onboarding workflow for creating a canonical s
 
 Intake must treat source documents as evidence, not automatic truth. Prior documents may be outdated, incomplete, inflated, aspirational, contradictory, or context-specific.
 
+Imported resumes, CVs, LinkedIn profiles, cover letters, portfolio examples, recruiter resumes, and prior generated artifacts are not permanent factual authorities. Once their material claims have been ingested, reconciled, and verified, the canonical source-of-truth record and approved ledgers become the authority. Generated artifacts remain downstream outputs unless separately imported and verified.
+
 Intake may extract candidate claims and identify likely facts, skills, assumptions, or themes, but inferred claims must be phrased as questions until the user confirms them. Inferred claims are allowed only as questions, never as claims.
 
-Intake should ask a few questions at a time, generally 3-5, and should separate:
+Intake should ask a few questions per response or batch, generally 3-5, and should separate:
 
 - Confirmed facts
 - Source-extracted claims
@@ -66,6 +68,8 @@ Intake should ask a few questions at a time, generally 3-5, and should separate:
 - Approved claims
 - Rejected or do-not-claim items
 - Claims needing evidence, metrics, or scope
+
+The small-batch limit is a user-experience throttle, not a scope limit. Intake must continue batching until material imported claims are covered, intentionally paused, deferred, rejected, excluded as not material, or marked as needing evidence, metrics, or scope clarification. A checkpoint is a progress commit; it is not proof that the relevant source set is fully ingested.
 
 Intake must support pause/resume checkpoints and must be honest about whether it can actually save/update Google Drive files or only produce copy-ready checkpoint content.
 
@@ -124,10 +128,13 @@ When sources conflict, use this priority order:
 
 1. User's direct current instruction
 2. User-confirmed Intake claim ledger and do-not-claim list, when available
-3. Current target document, job description, request, or requirement set for target context and terminology
-4. Latest approved canonical source record
-5. COMPASS repository rules
-6. Project instructions
-7. ChatGPT memory
+3. Latest approved canonical source-of-truth record
+4. Imported artifacts as evidence and provenance only
+5. Current target document, job description, recruiter request, or opportunity record for target context and terminology only
+6. Generated artifacts as historical outputs only
+7. COMPASS repository rules and framework defaults
+8. Project instructions and memory only when not contradicted by stronger sources
+
+Target documents or recruiter requests may identify terminology and gaps, but they do not create experience, skills, ownership, metrics, credentials, or facts the user does not have.
 
 If repository or source-record access fails, say so clearly instead of reconstructing unavailable facts from memory.

@@ -2,6 +2,19 @@
 
 All notable framework changes should be documented here.
 
+## vNext 2026-05.5 - Intake Coverage Gate and Artifact Supersession
+
+Clarified COMPASS Intake coverage requirements and downstream source authority without changing the active framework version identifier.
+
+Behavior updates:
+
+- Imported resumes, CVs, LinkedIn profiles, cover letters, portfolio examples, recruiter resumes, and prior generated artifacts are evidence inputs and provenance records, not permanent factual authorities.
+- After material claims are ingested, reconciled, and verified, the canonical source-of-truth record and approved ledgers supersede the imported artifact for downstream use.
+- Intake must treat 3-5 questions as a per-response or per-batch pacing rule, not a per-role, per-artifact, or total Intake limit.
+- A role, project, artifact, or source file is not Intake-complete until material imported claims are captured in coverage metadata and resolved into an approved, narrowed, rejected, evidence-needed, metric-needed, scope-needed, deferred, or excluded status.
+- Checkpoints are progress commits, not proof of full source coverage.
+- Generated artifacts are downstream outputs and historical records, not factual authorities, unless separately imported and verified through Intake.
+
 ## vNext 2026-05.5 - COMPASS Intake Terminology Migration
 
 Renamed the active source-of-truth onboarding workflow from "Layer 0" to "COMPASS Intake" while preserving the same verified source-of-truth onboarding function.

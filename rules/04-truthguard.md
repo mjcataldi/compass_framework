@@ -41,3 +41,5 @@ Before producing an artifact, check for:
 When a COMPASS Intake claim ledger exists, it is the strongest claim-safety source.
 
 Do-not-claim entries must override target-document keyword pressure.
+
+Imported artifacts that have not been fully covered by Intake remain evidence leads, not canonical truth. Generated artifacts are historical outputs, not source records, unless separately imported and verified through Intake.

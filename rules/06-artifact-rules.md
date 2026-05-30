@@ -10,6 +10,8 @@ COMPASS may generate canonical career records, claim ledgers, analysis reports, 
 
 Generated artifacts must be clean deliverables. Do not include internal COMPASS analysis in the artifact unless the user explicitly requests an internal dossier.
 
+Generated artifacts are downstream outputs, not factual authorities. Do not use an old resume, cover letter, recruiter message, LinkedIn draft, application answer, or portfolio draft as source truth unless it has been separately imported, extracted, reconciled, and verified through COMPASS Intake.
+
 ## Page Authority
 
 When a user specifies a page length or page limit for a DOCX-style artifact, the page count refers to the rendered Word/DOCX artifact using the relevant formatting standard.
