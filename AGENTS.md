@@ -516,7 +516,7 @@ Known source status:
 - Deprecated compatibility shims and predecessor-name files have been removed; do not restore them without explicit approval.
 - Migration notes record the COMPASS-only canonicalization posture.
 - The active version is `vNext 2026-05.4`; older changelog entries remain historical context.
-- The global LEAP shortcut references `/prompts/leap-recon-standard.md`; that file is not present in this repository as currently structured.
+- This repository does not vendor a separate LEAP Charter or `/prompts/leap-recon-standard.md`; use this editable repository section as the repo-local LEAP operating source.
 
 ---
 
@@ -734,7 +734,11 @@ For COMPASS repository recon:
 6. Use `rg` to locate existing terms, duplicate policy, stale references, and affected files.
 7. Return Recon only unless the user explicitly asks for implementation.
 
-The global LEAP shortcut references `/prompts/leap-recon-standard.md`; that file is not present in this repository as currently structured. If no external LEAP framework source is available, stop and explain that the standard prompt is unavailable instead of improvising it.
+Shortcut handling:
+
+- When the user says `LEAP Recon:` or `Run LEAP Recon for the following functionality:`, use the COMPASS repository recon steps above. Do not stop merely because the external `/prompts/leap-recon-standard.md` is absent.
+- When the user says `LEAP Prompt:` and describes a change, treat it as a bounded implementation request under the House Standard Prompt Behavior and LEAP Project Rules above, unless the prompt explicitly requests Recon only or a handoff prompt only.
+- If the user explicitly requires an external LEAP Charter, LEAP standard, or `/prompts/leap-recon-standard.md`, and that source cannot be read from the provided context or filesystem, stop and say which required external source is unavailable.
 
 ---
 
@@ -764,7 +768,7 @@ When producing an implementation handoff for this repo:
 - `COMPASS_Changelog.md` includes historical entries for earlier `vNext 2026-05` behavior; treat them as history unless superseded by `VERSION.md` and `COMPASS_Current.md`.
 - `migration/COMPASS_MIGRATION_NOTES.md` records COMPASS-only canonicalization and removed predecessor-name compatibility; it is migration context, not a separate active behavior source.
 - No `draft`, `archive`, or stale-document directories were discovered during onboarding.
-- The file `/prompts/leap-recon-standard.md` referenced by the locked global LEAP shortcut is not present in this repository.
+- No standalone LEAP Charter or `/prompts/leap-recon-standard.md` is present in this repository; repo-local LEAP shortcut behavior is defined in the editable repository section above.
 
 ---
 
