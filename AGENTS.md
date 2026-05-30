@@ -323,31 +323,31 @@ Project name:
 
 Project summary:
 
-COMPASS is a field-agnostic, source-grounded framework for turning messy inputs into verified, defensible outputs. It stands for Capture, Organize, Map, Probe, Approve, Synthesize, Store. COMPASS is the canonical framework name and repository terminology.
+COMPASS is a field-agnostic, source-grounded framework for turning messy inputs into verified, defensible outputs. It stands for Capture, Organize, Map, Probe, Approve, Synthesize, Store. The repository is a Markdown-based framework source containing canonical behavior docs, durable rules, launcher prompts, and examples; it is not currently documented as an application runtime.
 
 Application type and maturity:
 
-- Type: Markdown-based prompt, rule, example, and framework documentation repository.
-- Maturity: Active framework, current version `vNext 2026-05.2`.
+- Type: Markdown documentation, prompt, rule, and example repository.
+- Maturity: Active framework; current version is `vNext 2026-05.3`.
 - Canonical branch: `main`.
-- Product runtime: No application runtime is documented in this repository.
+- Product runtime: No frontend, backend, package runtime, database, or deployment target is documented in this repository.
 
 Primary users and use cases:
 
-- Users: reviewers, stakeholders, hiring teams, evaluators, decision-makers, future users, and agents executing COMPASS workflows.
-- Use cases: source-of-truth onboarding, claim verification, analysis, evidence mapping, artifact generation, career/job-search materials, product briefs, strategy memos, research plans, consulting deliverables, grants, policy documents, and personal knowledge systems.
+- Users: assistants/agents running COMPASS workflows, reviewers, stakeholders, hiring teams, evaluators, decision-makers, and future users.
+- Use cases: source-of-truth onboarding, claim verification, evidence mapping, analysis, artifact generation, career/job-search materials, product briefs, strategy memos, research plans, consulting deliverables, grants, policy documents, and personal knowledge systems.
 
 Primary product/architecture docs:
 
-- `README.md` - repository overview, canonical source files, Layer 0 setup, branch policy, memory/context policy, source-of-truth policy.
-- `VERSION.md` - active version, canonical branch, status, naming rule, compatibility rule.
-- `COMPASS_Current.md` - canonical active framework definition, workflow phases, source priority, TruthGuard summary.
+- `README.md` - repository overview, canonical source files, Layer 0 setup, branch policy, memory/context policy, and source-of-truth policy.
+- `VERSION.md` - active version, status, canonical branch, naming rule, compatibility rule, and material behavior notes.
+- `COMPASS_Current.md` - canonical active framework definition, workflow phases, source priority, recommendation values, and TruthGuard summary.
 - `COMPASS_Changelog.md` - framework change history and change-management rules.
 - `rules/` - durable behavior rules; prompt templates defer to these files.
-- `rules/07-source-of-truth-onboarding.md` - Layer 0 source-of-truth onboarding, storage disclosure, checkpoint rules.
-- `prompts/` - workflow launcher prompt templates.
-- `examples/` - example output and checkpoint patterns.
-- `migration/` - COMPASS canonicalization notes.
+- `rules/07-source-of-truth-onboarding.md` - Layer 0 source-of-truth onboarding, storage disclosure, checkpoint artifact, and pause/resume rules.
+- `prompts/` - reusable workflow launcher prompt templates.
+- `examples/` - example output and Layer 0 checkpoint patterns.
+- `migration/COMPASS_MIGRATION_NOTES.md` - COMPASS-only canonicalization notes.
 
 Read the relevant docs before implementing layer, architecture, workflow, data model, or user-facing changes.
 
@@ -355,15 +355,20 @@ Read the relevant docs before implementing layer, architecture, workflow, data m
 
 ## Repository Layout
 
-- `README.md` - high-level framework entry point and canonical file list.
-- `VERSION.md` - active version and compatibility rules.
+- `AGENTS.md` - combined local-trial LEAP instructions; only the editable repository section should be populated during onboarding.
+- `README.md` - high-level framework entry point and canonical source file list.
+- `VERSION.md` - active framework version and compatibility rules.
 - `COMPASS_Current.md` - canonical active framework behavior.
-- `COMPASS_Changelog.md` - material framework changes.
+- `COMPASS_Changelog.md` - material framework change history.
 - `rules/` - numbered durable COMPASS rules.
 - `prompts/` - reusable COMPASS launcher prompts.
 - `examples/` - sample analyses and Layer 0 checkpoint output patterns.
 - `migration/` - COMPASS canonicalization notes.
-- `AGENTS.md` - combined local-trial LEAP instructions; only the editable repository section should be populated during onboarding.
+- Frontend path: none documented.
+- Backend/API path: none documented.
+- Tests path: none documented.
+- Scripts path: none documented.
+- Infrastructure path: none documented.
 
 If the repository structure changes, update this section.
 
@@ -373,16 +378,15 @@ If the repository structure changes, update this section.
 
 - Primary format: Markdown.
 - Prompt/rule system: COMPASS rule files and launcher prompts.
-- Scripts: None currently documented.
 - Version control: Git; `main` is canonical.
-- Frontend: None documented.
-- Backend/API: None documented.
-- Database/storage/queue/cache: None documented for the repository itself.
+- Frontend: none documented.
+- Backend/API: none documented.
+- Database/storage/queue/cache: none documented for the repository itself.
 - External datastore references: Layer 0 may use Google Drive, GitHub, or another user-selected datastore for source-of-truth artifacts, but only when access is available and explicitly disclosed.
-- Package manager: None documented.
-- Test framework: None documented.
-- Runtime versions: TBD - Project owner should answer: "Are there required shell, Git, Markdown, or document tooling versions for maintaining this repository?"
-- Infrastructure/deployment: None documented.
+- Infrastructure/deployment: none documented.
+- Package manager: none documented.
+- Test framework: none documented.
+- Runtime versions: TBD - Project owner should answer: "Are there required shell, Git, Markdown, document-generation, or validation-tool versions for maintaining this repository?"
 
 Use the existing stack unless the user explicitly requests evaluation or migration.
 
@@ -418,7 +422,11 @@ Useful inspection commands:
 rg --files
 ```
 
-Use targeted `rg` searches for affected terms before changing framework rules or prompts.
+```bash
+rg -n "SEARCH_TERM"
+```
+
+Use targeted `rg` searches for affected terms before changing framework rules or prompts. When changing COMPASS terminology, search for predecessor, legacy, stale, or conflicting references across active files.
 
 ---
 
@@ -446,7 +454,15 @@ Use the most relevant validation commands for the changed area.
 # Build command: no build artifact is documented.
 ```
 
-Repository-specific sanity check for terminology cleanup: search for the deprecated term supplied by the user and remove remaining active references.
+Repository-specific sanity checks:
+
+```bash
+rg -n "COMPASS|Layer 0|TruthGuard|source of truth|source-of-truth|checkpoint|do-not-claim"
+```
+
+```bash
+rg -n "legacy|predecessor|compatibility|deprecated|removed|stale|draft|archive|conflict"
+```
 
 If only part of the repo changed, prefer targeted checks first. Run broader checks when practical.
 
@@ -474,7 +490,7 @@ When COMPASS behavior changes materially, update `VERSION.md` and `COMPASS_Chang
 
 Prompt templates are workflow launchers, not independent policy sources. They must defer to active rule files.
 
-COMPASS is the only canonical framework name. New work should use COMPASS terminology.
+COMPASS is the only canonical framework name. New active rules, prompts, examples, and project guidance should use COMPASS terminology.
 
 ---
 
@@ -497,14 +513,23 @@ If these conflict, call out the conflict and prefer the more specific, more rece
 Known source status:
 
 - Canonical active files: `README.md`, `VERSION.md`, `COMPASS_Current.md`, `COMPASS_Changelog.md`, `rules/`, COMPASS-named prompts, and `examples/`.
-- Deprecated compatibility files have been removed.
-- Migration notes: `migration/COMPASS_MIGRATION_NOTES.md` records the COMPASS-only canonicalization posture.
+- Deprecated compatibility shims and predecessor-name files have been removed; do not restore them without explicit approval.
+- Migration notes record the COMPASS-only canonicalization posture.
+- The active version is `vNext 2026-05.3`; older changelog entries remain historical context.
+- The global LEAP shortcut references `/prompts/leap-recon-standard.md`; that file is not present in this repository as currently structured.
 
 ---
 
 ## Architecture Rules
 
 Follow the project's existing documentation architecture.
+
+Default documentation expectations:
+
+- Keep durable rules, workflow prompts, examples, version notes, and changelog entries aligned.
+- Keep framework behavior explicit rather than implied only by examples.
+- Prefer incremental edits over broad rewrites unless the user requested a framework refactor.
+- Preserve documented source priority, TruthGuard, phase separation, and artifact cleanliness.
 
 Project-specific architecture constraints:
 
@@ -522,6 +547,13 @@ Project-specific architecture constraints:
 
 This repo has no documented database schema, seed data, queue, cache, or persistence layer. Migration currently means framework/document canonicalization.
 
+Before changing migration or canonicalization behavior:
+
+- Inspect `migration/COMPASS_MIGRATION_NOTES.md`, `VERSION.md`, `COMPASS_Changelog.md`, and affected active files.
+- Preserve canonical COMPASS terminology unless the project owner explicitly approves a naming change.
+- Do not silently restore removed compatibility shims or predecessor-name files.
+- Update version/changelog notes when a migration changes active framework behavior.
+
 Project-specific data rules:
 
 - Do not claim source-of-truth files were saved to Google Drive, GitHub, or another datastore unless the write was actually performed and verified.
@@ -536,9 +568,16 @@ Project-specific data rules:
 
 No software API contracts are documented. The repository's contracts are the framework behavior, source-priority rules, prompt-launcher expectations, artifact standards, and output section shapes.
 
+When changing framework contracts:
+
+- Preserve backward compatibility unless the change intentionally supersedes old behavior.
+- Update canonical rules and related prompts/examples together.
+- Avoid creating parallel contract definitions across prompts, examples, and rules.
+- Make changed output sections, recommendation values, or artifact requirements explicit in the relevant rule file.
+
 Project-specific contract rules:
 
-- Preserve compatibility for current COMPASS launch prompts unless the change intentionally supersedes them.
+- Preserve compatibility for current COMPASS launcher prompts unless the change intentionally supersedes them.
 - When changing output behavior, update the relevant rule file first, then update prompts/examples/changelog as needed.
 - Keep recommendation values consistent with `COMPASS_Current.md` unless a domain profile explicitly defines a narrower set.
 - Do not create parallel policy definitions in examples or prompts that conflict with `rules/`.
@@ -548,6 +587,13 @@ Project-specific contract rules:
 ## UI/UX Rules
 
 No UI is documented in this repository. Treat user experience as prompt, workflow, and artifact experience.
+
+For workflow and artifact UX:
+
+- Keep prompts calm, clear, and usable for non-technical users.
+- Preserve user-provided source material and confirmations.
+- Make uncertainty, missing evidence, storage status, and next safe actions explicit.
+- Avoid large prompt or artifact-format rewrites unless requested.
 
 Project-specific UX rules:
 
@@ -607,11 +653,19 @@ Project-specific security/privacy rules:
 No automated test framework is documented. When behavior changes, validate by targeted repository inspection:
 
 1. Confirm relevant `rules/`, prompts, examples, `VERSION.md`, and `COMPASS_Changelog.md` remain aligned.
-2. Search for deprecated terminology when naming or migration behavior changes.
+2. Search for deprecated or conflicting terminology when naming or migration behavior changes.
 3. Check that prompt templates still defer to active rule files.
 4. Check that examples do not contain policy that contradicts active rules.
 5. Run documented helper scripts when applicable and available.
 6. Report clearly when no automated tests were run because none are documented.
+
+Repository validation priorities:
+
+1. Framework contract alignment across canonical docs and rule files.
+2. Prompt deferral to active rules.
+3. Example consistency with active behavior.
+4. Regression searches for deprecated terminology or stale compatibility guidance.
+5. Manual smoke review of critical workflows such as Layer 0, analysis, and career artifacts.
 
 ---
 
@@ -676,7 +730,7 @@ For COMPASS repository recon:
 2. Inspect `README.md`, `VERSION.md`, `COMPASS_Current.md`, and `COMPASS_Changelog.md`.
 3. Read the rule files relevant to the requested workflow or behavior.
 4. Read the prompt templates and examples that launch or demonstrate the requested behavior.
-5. Check migration notes when naming or compatibility is in scope.
+5. Check migration notes when naming, compatibility, or canonicalization is in scope.
 6. Use `rg` to locate existing terms, duplicate policy, stale references, and affected files.
 7. Return Recon only unless the user explicitly asks for implementation.
 
@@ -694,6 +748,23 @@ When producing an implementation handoff for this repo:
 - State validation steps, including targeted searches and any helper script runs.
 - Include compatibility notes for removed or replaced prompt behavior when relevant.
 - Keep the implementation prompt bounded; do not request broad framework rewrites for narrow rule changes.
+
+---
+
+## Infrastructure and Deployment Notes
+
+- No application deployment, hosting target, container, CI workflow, infrastructure-as-code, or release automation is documented.
+- The repository's active publication model is Git on the canonical `main` branch.
+- TBD - Project owner should answer: "Is there an external publication, release, marketplace, or ChatGPT Project sync process for COMPASS updates?"
+
+---
+
+## Known Stale, Draft, Archived, or Conflicting Documents
+
+- `COMPASS_Changelog.md` includes historical entries for earlier `vNext 2026-05` behavior; treat them as history unless superseded by `VERSION.md` and `COMPASS_Current.md`.
+- `migration/COMPASS_MIGRATION_NOTES.md` records COMPASS-only canonicalization and removed predecessor-name compatibility; it is migration context, not a separate active behavior source.
+- No `draft`, `archive`, or stale-document directories were discovered during onboarding.
+- The file `/prompts/leap-recon-standard.md` referenced by the locked global LEAP shortcut is not present in this repository.
 
 ---
 
