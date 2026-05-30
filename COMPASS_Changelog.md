@@ -2,6 +2,17 @@
 
 All notable framework changes should be documented here.
 
+## vNext 2026-05.5 - Command Registry
+
+Added `COMPASS_COMMANDS.md` as the canonical user-facing command registry.
+
+Behavior updates:
+
+- Documented current first-class COMPASS commands: Intake, Analysis, Tailored Resume, Recruiter-Targeted Resume, and Cover Letter.
+- Clarified supported artifact requests that are governed by artifact rules but do not yet have first-class launcher prompts.
+- Clarified that `COMPASS Charter` is not currently an active first-class command unless explicitly added later with supporting prompt/rule files.
+- Updated `README.md` to surface the command registry and active command list.
+
 ## vNext 2026-05.5 - Intake Coverage Gate and Artifact Supersession
 
 Clarified COMPASS Intake coverage requirements and downstream source authority without changing the active framework version identifier.
