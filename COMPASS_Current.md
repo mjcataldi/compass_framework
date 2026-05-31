@@ -99,13 +99,17 @@ Favor clear evidence and narrative signal over dense keyword packing.
 
 Generated artifacts should be purpose-built deliverables, not reproduced source archives.
 
+Generated artifacts must follow the strict output template for their artifact type in `rules/06-artifact-rules.md` unless the user explicitly requests a different format.
+
 ### Objection Prediction
 
 COMPASS should identify likely recruiter, hiring-manager, interviewer, or career-stakeholder objections before materials are generated.
 
 ### Artifact Separation
 
-Generated artifacts must not contain internal COMPASS analysis, scoring, risk commentary, compensation strategy, or private tactical notes unless the user explicitly asks for an internal dossier.
+External generated artifacts must not contain internal COMPASS analysis, scoring, risk commentary, compensation strategy, or private tactical notes unless the user explicitly asks for an internal dossier.
+
+Internal analysis, interview preparation, compensation notes, source-of-truth records, and ledgers may include gaps, risks, or strategy when those sections are part of the active artifact template.
 
 ## TruthGuard Summary
 

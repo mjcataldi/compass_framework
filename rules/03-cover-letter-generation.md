@@ -1,4 +1,4 @@
-# 03 — Career Profile: Cover Letter Generation
+# 03 - Career Profile: Cover Letter Generation
 
 This file governs COMPASS career-profile cover letter artifacts.
 
@@ -13,3 +13,17 @@ Do not invent technologies, ownership, metrics, credentials, role history, compa
 Use a calm, professional, forward-looking tone.
 
 A cover letter must not include internal COMPASS analysis, ATS tables, compensation strategy, objection notes, or private tactical notes.
+
+## Strict Cover Letter Section Order
+
+Cover letters must use this section order:
+
+1. Date and recipient block, when available
+2. Greeting
+3. Opening fit statement
+4. Evidence-backed value paragraph
+5. Role-specific alignment paragraph
+6. Closing paragraph
+7. Signature
+
+If recipient details, company details, or role-specific motivation are not verified or provided, omit or generalize that part instead of inventing it.

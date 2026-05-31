@@ -23,6 +23,15 @@ Use these files as the active source of truth:
 - `rules/07-compass-intake.md` — COMPASS Intake source-of-truth onboarding and claim verification rules
 - `prompts/` — reusable prompt templates
 - `prompts/compass-intake.md` — reusable COMPASS Intake launcher prompt
+- `prompts/compass-analysis.md` — reusable COMPASS analysis launcher prompt
+- `prompts/compass-tailored-resume.md` — reusable tailored resume launcher prompt
+- `prompts/recruiter-targeted-resume.md` — reusable recruiter-targeted resume launcher prompt
+- `prompts/compass-cover-letter.md` — reusable cover letter launcher prompt
+- `prompts/compass-recruiter-response.md` — reusable recruiter response launcher prompt
+- `prompts/compass-application-answer.md` — reusable application answer launcher prompt
+- `prompts/compass-follow-up-message.md` — reusable follow-up message launcher prompt
+- `prompts/compass-interview-prep.md` — reusable interview preparation launcher prompt
+- `prompts/compass-compensation-note.md` — reusable compensation and remote-work note launcher prompt
 - `examples/` — example output patterns
 
 Compatibility shims for earlier naming have been removed. Prompt templates and rule files should use COMPASS terminology only.
@@ -62,6 +71,8 @@ Intake storage behavior must be honest:
 ## Career Profile
 
 COMPASS is career-focused. The active profile is the careers / job-search profile: role evaluation, hiring-manager scan optimization, ATS and semantic alignment, master CV claim-ledger construction, truth-preserving resume tailoring, cover letters, recruiter-specific positioning, compensation and remote-work risk analysis, interview objection prediction, and evidence mapping from source records to job descriptions.
+
+Generated artifacts must follow the strict output templates in `rules/06-artifact-rules.md` unless the user explicitly requests a different format. Prompt templates are launchers and must defer to the active rule files for artifact section order, source priority, TruthGuard, and clean-deliverable requirements.
 
 ## Branch Policy
 

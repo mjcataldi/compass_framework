@@ -1,4 +1,4 @@
-# 02 — Career Profile: Resume Generation
+# 02 - Career Profile: Resume Generation
 
 This file governs COMPASS career-profile resume artifacts.
 
@@ -40,6 +40,33 @@ Default target length by use case:
 ## Artifact Separation
 
 A resume artifact must not include COMPASS scoring, ATS matrix commentary, compensation strategy, risk notes, recruiter objection notes, framework explanations, or private tactical notes.
+
+## Strict Resume Section Order
+
+Tailored resumes must use this section order:
+
+1. Candidate name and contact block
+2. Target title line
+3. Professional summary
+4. Core skills
+5. Professional experience
+6. Selected projects or delivery highlights, when source-backed and useful
+7. Education
+8. Certifications, clearances, or credentials, only when verified
+
+Recruiter-targeted resumes must use this section order:
+
+1. Candidate name and contact block
+2. Broad target title line
+3. Recruiter-facing summary
+4. Role families or target areas
+5. Core skills
+6. Professional experience
+7. Representative achievements or projects, when source-backed and useful
+8. Education
+9. Certifications, clearances, or credentials, only when verified
+
+If a section has no verified source-backed content, omit it rather than filling it with unsupported claims. Do not mark gaps inside the resume artifact.
 
 ## ATS-Safe Word Formatting Standard
 

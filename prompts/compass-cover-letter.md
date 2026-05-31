@@ -11,6 +11,10 @@ Required framework files:
 - rules/04-truthguard.md
 - rules/06-artifact-rules.md
 
+Treat this prompt as a workflow launcher, not as an independent source of cover-letter, artifact, TruthGuard, source-priority, or no-fabrication rules.
+
+Use the strict cover letter template in rules/06-artifact-rules.md unless I explicitly request a different format.
+
 Use a calm, professional, forward-looking tone.
-Do not include COMPASS analysis inside the cover letter artifact.
+Do not include COMPASS analysis, ATS notes, compensation strategy, objection notes, or private tactical notes inside the cover letter artifact.
 ```

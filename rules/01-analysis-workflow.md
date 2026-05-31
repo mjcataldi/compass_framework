@@ -1,4 +1,4 @@
-# 01 — Analysis Workflow
+# 01 - Analysis Workflow
 
 This file governs COMPASS analysis behavior.
 
@@ -24,14 +24,16 @@ A COMPASS analysis should:
 
 For career/job-search analysis, include:
 
-1. Role fit summary
-2. Fast hiring-manager scan
-3. ATS and semantic alignment matrix
+1. Fit or value summary
+2. Fast reviewer scan
+3. Semantic alignment matrix
 4. Narrative cohesion assessment
-5. Job-description-to-source evidence mapping
-6. Missing high-priority terms
-7. Recruiter and hiring-manager objection prediction
-8. Compensation and remote-work risk
-9. Company environment and candidate sustainability
+5. Source-to-output evidence mapping
+6. Missing high-priority terms, facts, or capabilities
+7. Stakeholder objection prediction
+8. Risk and constraint analysis
+9. Environment or sustainability analysis when relevant
 10. TruthGuard notes
 11. Recommendation
+
+Use the same section order for analysis reports defined in `rules/06-artifact-rules.md`.

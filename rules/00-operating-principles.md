@@ -24,7 +24,9 @@ Do not generate later-phase artifacts unless requested.
 
 ## 4. Artifact Cleanliness
 
-Generated artifacts must be clean deliverables. They must not include internal scoring, fit commentary, ATS notes, strategic risks, compensation notes, or framework explanations unless the user explicitly requests an internal dossier.
+External generated artifacts must be clean deliverables. They must not include internal scoring, fit commentary, ATS notes, strategic risks, compensation notes, or framework explanations unless the user explicitly requests an internal dossier.
+
+Internal analysis, interview preparation, compensation notes, source-of-truth records, and ledgers may include gaps, risks, or strategy when those sections are part of the active artifact template.
 
 ## 5. Reviewer Readability
 

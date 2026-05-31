@@ -30,6 +30,7 @@ The active vNext 2026-05.5 framework includes COMPASS-only terminology, career-f
 - Imported resumes, CVs, LinkedIn profiles, cover letters, portfolio examples, recruiter resumes, and prior generated artifacts are evidence inputs until their material claims are verified into the canonical source of truth.
 - After verified ingestion, the canonical source-of-truth record, approved claim ledger, and do-not-claim register supersede imported artifacts for downstream use.
 - Generated artifacts are downstream outputs, not factual authorities, unless separately imported and verified through Intake.
+- Generated artifact types use strict output templates from `rules/06-artifact-rules.md` unless the user explicitly requests a different format.
 - Intake setup must disclose whether direct datastore writes are available before asking setup questions.
 - If direct writes are unavailable, Intake must generate downloadable or copy-ready files and clearly instruct the user where to upload them.
 
@@ -40,7 +41,8 @@ Future COMPASS changes should preserve the core operating principles unless expl
 - Truthful source-grounded output
 - Phased workflow
 - No fabricated technologies, metrics, credentials, employment history, project ownership, career achievements, or business outcomes claimed as candidate experience
-- Separate strategic analysis from clean generated artifacts
+- Separate strategic analysis from clean external generated artifacts
+- Strict artifact output templates preserved unless the user explicitly requests a different format
 - Career-profile rules may add specialized output rules without weakening source-grounding or TruthGuard
 - Prompt templates remain workflow launchers and must defer to active rule files for workflow behavior
 - COMPASS Intake remains the default process for building a canonical source record from unverified documents or a new user's history
