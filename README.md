@@ -23,8 +23,10 @@ Use these files as the active source of truth:
 - `rules/` — durable behavior rules
 - `rules/07-compass-intake.md` — COMPASS Intake source-of-truth onboarding and claim verification rules
 - `rules/08-human-authenticity.md` - truthful human-authenticity and reviewer-signal rules for external artifacts
+- `rules/09-source-rebase.md` - safe source-of-truth scaffold alignment rules
 - `prompts/` — reusable prompt templates
 - `prompts/compass-intake.md` — reusable COMPASS Intake launcher prompt
+- `prompts/compass-source-rebase.md` - reusable COMPASS Source Rebase launcher prompt
 - `prompts/compass-analysis.md` — reusable COMPASS analysis launcher prompt
 - `prompts/compass-tailored-resume.md` — reusable tailored resume launcher prompt
 - `prompts/recruiter-targeted-resume.md` — reusable recruiter-targeted resume launcher prompt
@@ -36,6 +38,7 @@ Use these files as the active source of truth:
 - `prompts/compass-compensation-note.md` — reusable compensation and remote-work note launcher prompt
 - `examples/` — example output patterns
 - `examples/compass-intake-artifact-templates.md` - copy-ready COMPASS Intake artifact skeletons
+- `templates/` - framework-owned scaffold and report templates
 
 Compatibility shims for earlier naming have been removed. Prompt templates and rule files should use COMPASS terminology only.
 
@@ -46,6 +49,7 @@ The active user-facing command surface is defined in `COMPASS_COMMANDS.md`.
 Current first-class commands:
 
 - COMPASS Intake
+- COMPASS Source Rebase
 - COMPASS Analysis
 - COMPASS Tailored Resume
 - COMPASS Recruiter-Targeted Resume
@@ -86,6 +90,18 @@ Intake storage behavior must be honest:
 - If direct write/update access is unavailable or uncertain, produce downloadable or copy-ready checkpoint files and clearly tell the user what to save where.
 - When practical, package changed checkpoint files into a downloadable ZIP bundle for upload to the target datastore.
 - Never claim that files were saved when they were only generated in chat, generated locally, or offered for download.
+
+## COMPASS Source Rebase
+
+COMPASS Source Rebase is the safe scaffold-alignment workflow for existing COMPASS source-of-truth repositories.
+
+Use Source Rebase when a framework upgrade changes the recommended source-of-truth scaffold and the user wants to identify or create missing scaffold directories or placeholder files without disturbing existing source records.
+
+Source Rebase defaults to dry-run mode. It may inspect structure and produce a report, but it must not overwrite, delete, rename, move, edit, or otherwise modify existing user-owned files.
+
+The first permitted write mode is `create-missing-only`, and it requires explicit user approval for the exact target. In that mode, COMPASS may create only absent scaffold directories or absent framework placeholder files. Existing paths are always skipped and reported.
+
+Source Rebase is not COMPASS Intake. It does not verify, extract, reconcile, approve, reject, or modify career claims.
 
 ## Career Profile
 

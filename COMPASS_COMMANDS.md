@@ -53,6 +53,43 @@ Update my COMPASS Source of Truth.
 
 ---
 
+### COMPASS Source Rebase
+
+**Launcher:** `prompts/compass-source-rebase.md`
+
+**Purpose:** Safely align an existing COMPASS source-of-truth repository with the current framework-owned scaffold without overwriting, deleting, renaming, moving, or modifying existing user-owned source records.
+
+**Use when the user asks to:**
+
+- run COMPASS Source Rebase
+- rebase a COMPASS source-of-truth repository scaffold
+- align an existing COMPASS source repository after a framework upgrade
+- reinitialize source-of-truth structure safely without overwriting current files
+- identify missing scaffold directories or placeholder files
+
+**Example trigger phrases:**
+
+```text
+Run COMPASS Source Rebase.
+Rebase my COMPASS source-of-truth repo.
+Align my COMPASS Source of Truth with the current scaffold.
+Dry-run the source repo scaffold update.
+```
+
+**Required framework files:**
+
+- `VERSION.md`
+- `COMPASS_Current.md`
+- `rules/00-operating-principles.md`
+- `rules/09-source-rebase.md`
+- `templates/compass-source-of-truth-scaffold.md`
+- `templates/compass-source-rebase-report.md`
+- `prompts/compass-source-rebase.md`
+
+**Output discipline:** Source Rebase defaults to dry-run mode. Existing user-owned source records always win. Do not overwrite, delete, rename, move, edit, verify claims, or perform COMPASS Intake during Source Rebase. Create missing scaffold paths only after explicit approval for `create-missing-only`.
+
+---
+
 ### COMPASS Analysis
 
 **Launcher:** `prompts/compass-analysis.md`

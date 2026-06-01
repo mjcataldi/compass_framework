@@ -75,6 +75,16 @@ Intake must support pause/resume checkpoints and must be honest about whether it
 
 Committed Intake rounds should use stable artifact templates for checkpoint records, claim-ledger entries, do-not-claim entries, coverage-register entries, storage-status blocks, and optional ZIP bundle manifests.
 
+## COMPASS Source Rebase
+
+COMPASS Source Rebase is the safe scaffold-alignment workflow for existing COMPASS source-of-truth repositories.
+
+Source Rebase defaults to `dry-run` mode and reports existing paths, missing scaffold paths, skipped files, refused destructive actions, write verification status, and the next safe action.
+
+The first permitted write mode is `create-missing-only`, and it requires explicit user approval for the exact target. Existing user-owned source-of-truth files always win over framework scaffold templates.
+
+Source Rebase must not overwrite, delete, rename, move, edit, or otherwise modify existing user-owned records. It is not COMPASS Intake and must not verify, extract, reconcile, approve, reject, or modify career claims.
+
 ## Operating Principles
 
 ### Truth First
