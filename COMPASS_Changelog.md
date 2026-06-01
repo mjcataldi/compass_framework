@@ -2,6 +2,17 @@
 
 All notable framework changes should be documented here.
 
+## vNext 2026-05.5 - Intake Artifact Templates
+
+Made COMPASS Intake checkpoint artifact output more concrete without changing the active framework version identifier.
+
+Behavior updates:
+
+- Added stable Intake artifact template requirements for checkpoint records, claim-ledger entries, do-not-claim entries, coverage-register entries, storage-status blocks, and optional ZIP bundle manifests.
+- Added `examples/compass-intake-artifact-templates.md` with copy-ready generic skeletons.
+- Updated the checkpoint example to include coverage-register output and datastore visibility status.
+- Clarified that prompts should reference the reusable template pack while `rules/07-compass-intake.md` remains the durable policy source.
+
 ## vNext 2026-05.5 - Command Registry
 
 Added `COMPASS_COMMANDS.md` as the canonical user-facing command registry.

@@ -23,6 +23,8 @@ Important storage transparency rule: during setup verification, inspect whether 
 
 Checkpoint artifact rule: every committed Intake round should produce checkpoint artifacts, like a small git commit. At minimum, generate a checkpoint Markdown record, any changed claim-ledger or do-not-claim records, and any changed coverage-register entries. When possible, package changed files into a downloadable ZIP bundle so I can upload them to the target datastore.
 
+Template rule: use the active Intake rule and `examples/compass-intake-artifact-templates.md` for the checkpoint, claim-ledger, do-not-claim, coverage-register, storage-status, and ZIP manifest shapes. Do not duplicate or override the durable rule behavior in this launcher prompt.
+
 My source folder is:
 [PASTE GOOGLE DRIVE FOLDER LINK HERE]
 

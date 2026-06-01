@@ -73,6 +73,8 @@ The small-batch limit is a user-experience throttle, not a scope limit. Intake m
 
 Intake must support pause/resume checkpoints and must be honest about whether it can actually save/update Google Drive files or only produce copy-ready checkpoint content.
 
+Committed Intake rounds should use stable artifact templates for checkpoint records, claim-ledger entries, do-not-claim entries, coverage-register entries, storage-status blocks, and optional ZIP bundle manifests.
+
 ## Operating Principles
 
 ### Truth First

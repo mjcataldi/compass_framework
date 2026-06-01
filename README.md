@@ -34,6 +34,7 @@ Use these files as the active source of truth:
 - `prompts/compass-interview-prep.md` — reusable interview preparation launcher prompt
 - `prompts/compass-compensation-note.md` — reusable compensation and remote-work note launcher prompt
 - `examples/` — example output patterns
+- `examples/compass-intake-artifact-templates.md` - copy-ready COMPASS Intake artifact skeletons
 
 Compatibility shims for earlier naming have been removed. Prompt templates and rule files should use COMPASS terminology only.
 
@@ -74,6 +75,8 @@ GitHub remains optional for end users. Technical users may fork this repository 
 COMPASS Intake must support pause/resume behavior. Users may say `I need a break`, `pause`, `bookmark this`, or `let's continue later`; COMPASS should stop asking new questions and emit a checkpoint that can be resumed later.
 
 A checkpoint is a progress commit, not proof of full source coverage. Intake complete means the relevant material imported claims are captured in the coverage register and resolved into approved, narrowed, rejected, evidence-needed, metric-needed, scope-needed, deferred, or excluded status.
+
+Every committed Intake round should use stable artifact templates for the checkpoint Markdown record, claim-ledger entries, do-not-claim entries, coverage-register entries, storage-status block, and optional ZIP bundle manifest. The durable requirements are defined in `rules/07-compass-intake.md`; copy-ready skeletons are available in `examples/compass-intake-artifact-templates.md`.
 
 Intake storage behavior must be honest:
 

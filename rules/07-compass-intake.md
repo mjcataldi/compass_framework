@@ -113,6 +113,88 @@ At minimum, each committed round should produce:
 
 When practical, COMPASS should also package changed checkpoint files into a downloadable ZIP bundle so the user can upload them into the datastore as a batch.
 
+## Required Intake Artifact Templates
+
+Every committed Intake round should use a stable artifact shape so checkpoints, ledgers, and coverage metadata can be resumed and reviewed without reconstructing context from chat.
+
+Use `examples/compass-intake-artifact-templates.md` as the copy-ready example pack. The rule in this file remains the durable source of truth if an example needs adaptation.
+
+### Checkpoint Markdown Record
+
+Each checkpoint Markdown record should include:
+
+1. Checkpoint status: workflow, checkpoint ID, round ID, date, current stage, source set covered, and whether the current source set is partial or complete.
+2. Storage status: one approved storage-status label, direct-write availability, target datastore, generated or updated artifacts, and next save or verification action.
+3. Round summary: confirmed facts, source-extracted claims reviewed, inferred claims asked as questions, contradictions resolved or still open, and unresolved questions.
+4. Ledger changes: approved claims, narrowed claims, claim-depth boundaries, rejected or do-not-claim items, and claims needing evidence, metrics, scope clarification, deferral, or exclusion.
+5. Coverage changes: each material imported claim reviewed in the round with source/provenance, current status, and next action.
+6. Resume point: where Intake should continue next, including the next uncovered source section, role, project, or claim group.
+
+### Claim Ledger Entries
+
+Each claim-ledger entry should include:
+
+1. Claim ID.
+2. Claim text as extracted or proposed.
+3. Source or provenance.
+4. Status from the coverage gate status set.
+5. Approved wording when applicable.
+6. Claim-depth boundary when applicable.
+7. Evidence, metric, scope, deferral, or exclusion note when applicable.
+8. Last reviewed date or checkpoint ID.
+
+Approved, narrowed, and claim-depth-bounded entries may support downstream artifacts. Needs-evidence, needs-metric, needs-scope, deferred, excluded, rejected, and do-not-claim entries must not be used as output-ready claims.
+
+### Do-Not-Claim Entries
+
+Each do-not-claim entry should include:
+
+1. Rejected claim or prohibited wording.
+2. Source or provenance that introduced the claim.
+3. Reason for rejection or boundary.
+4. Downstream block instruction.
+5. Last reviewed date or checkpoint ID.
+
+Do-not-claim entries must override target-document keyword pressure and must block downstream artifacts from reintroducing the rejected claim.
+
+### Coverage-Register Entries
+
+Each coverage-register entry should include:
+
+1. Coverage ID.
+2. Source artifact, source section, role, project, or claim group.
+3. Material claim text or summary.
+4. Provenance note.
+5. Current status from the coverage gate status set.
+6. Resolution note or next action.
+7. Last reviewed date or checkpoint ID.
+
+Every material imported claim should have one coverage-register entry or equivalent checkpoint metadata before the source, role, project, or artifact is treated as Intake-complete.
+
+### Storage-Status Block
+
+Each checkpoint response and checkpoint Markdown record should include:
+
+1. One approved storage-status label.
+2. Direct-write availability: true, false, or unknown.
+3. Target datastore.
+4. Files generated or updated.
+5. Whether datastore visibility was verified.
+6. Next safe action.
+
+COMPASS must not state or imply that a checkpoint, ledger, register, or source-of-truth record was saved unless it was actually written and verified in the target datastore.
+
+### Optional ZIP Bundle Manifest
+
+When changed checkpoint artifacts are packaged into a ZIP bundle, include a manifest with:
+
+1. Bundle filename.
+2. Included files.
+3. Checkpoint ID and round ID.
+4. Storage status.
+5. Upload destination.
+6. Verification instruction.
+
 ## Recommended Checkpoint File Pattern
 
 Use stable, sortable filenames.
